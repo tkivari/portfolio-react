@@ -1,0 +1,109 @@
+.menu {
+    position absolute
+    top 0
+    left 0
+    z-index 1
+    width 0
+    height 100%
+    background rgba(0,0,0,.8)
+    color white
+    text-transform uppercase
+    transition width .35s, opacity .35s, visibility .35s, display .35s, opacity .35s
+    
+    a {
+        text-decoration none
+        color white
+        padding 15px
+        display inline-block
+        font-size 35px
+    }
+
+    font-family NeutrafaceTextLight
+}
+
+.menu.open {
+    width 100vw
+    opacity 1
+    visibility visible
+}
+
+.menu.closed {
+    width 0px
+    opacity 0
+    visibility hidden
+}
+
+.menu > div:first-child {
+    padding-top 80px
+}
+
+.header {
+    position relative
+    top 0
+    padding 10px
+    margin-left 20px
+    margin-top 10px
+    
+    .logo-black {
+        float left
+        img.logo {
+            width 185px
+        }
+    }
+
+    .menu-option-bar {
+        float right
+    }
+    
+    .button_container {
+        position absolute
+        top 5%
+        right 2%
+        height 22px
+        width 37px
+        cursor pointer
+        z-index 100
+        transition opacity .25s ease
+
+        &:hover {
+            opacity .7
+        }
+
+        &.open {
+            span {
+                background #E8E8E8
+            }
+            .top {
+                transform translateY(11px) translateX(0) rotate(45deg)
+            }
+            
+            .middle {
+                opacity 0
+            }
+            
+            .bottom {
+                transform translateY(-11px) translateX(0) rotate(-45deg)
+            }
+        }
+        span {
+            background #707070
+            border none
+            height 5px
+            width 100%
+            position absolute
+            top 0
+            left 0
+            transition  all .35s ease
+            cursor pointer
+            z-index 999
+
+            &:nth-of-type(2) {
+                top: 11px
+            }
+            
+            &:nth-of-type(3) {
+                top: 22px
+            }
+        }
+    }
+}

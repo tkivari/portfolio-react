@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Header from './components/header';
-import logo from './logo.svg';
+import Experience from './components/experience';
+// import logo from './logo.svg';
+import './static/css/index.css';
 import './App.css';
 
 class App extends Component {
@@ -8,9 +10,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Experience />
+        <Footer />
       </div>
     );
   }

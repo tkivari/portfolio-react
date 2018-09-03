@@ -33,7 +33,7 @@ class Header extends Component {
                     <div className="nav-item"><Link to="/contact">Contact Me</Link></div>
                 </div>
                 <div className="header">
-                    <div className="logo-black"><img className="logo" src="/assets/images/logo-black.svg" /></div>
+                    <div className="logo-black"><img alt="" className="logo" src="/assets/images/logo.svg" /></div>
                     <div className="menu-option-bar">
                         <div className="hamburger-icon" onClick={this.toggleMenu}>
                             <div className={"button_container " + this.menuClass() } id="toggle"><span className="top"></span><span className="middle"></span><span className="bottom"></span></div>
