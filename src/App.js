@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/header';
+import Footer from './components/footer';
 import Experience from './components/experience';
 // import logo from './logo.svg';
 import './static/css/index.css';
