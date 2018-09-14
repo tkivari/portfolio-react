@@ -9,10 +9,12 @@
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5",
+    "react-slick": "^0.23.1",
     "redux": "^4.0.0",
     "redux-form": "^7.4.2",
     "redux-promise": "^0.6.0",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "build-css": "stylus -c src/static/stylus/ --out src/static/css",

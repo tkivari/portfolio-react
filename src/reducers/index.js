@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
 import { applyMiddleware, compose } from 'redux';
-import { reducer as formReducer } from 'redux-form';
+import { reducer as FormReducer } from 'redux-form';
 import HeaderReducer from './header_reducer';
 import ExperienceReducer from './experience_reducer';
+import CompanyReducer from './company_reducer'; 
 import FooterReducer from './footer_reducer';
 import thunk from 'redux-thunk';
 
@@ -12,7 +13,8 @@ const rootReducer = combineReducers({
     header: HeaderReducer,
     footer: FooterReducer,
     experience: ExperienceReducer,
-    form: formReducer
+    company: CompanyReducer,
+    form: FormReducer
 },
     composeEnhancers(applyMiddleware(thunk))
 );
