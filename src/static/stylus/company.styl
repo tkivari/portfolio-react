@@ -2,9 +2,9 @@
     // display flex
     margin 0 30px 0 30px
 
-    .company-container {
-        width 250px
-        height 175px
+    .company-icon-container {
+        width 200px
+        height 100px
         background url() no-repeat center center
         background-color white       
         // display block
@@ -15,6 +15,36 @@
         padding 10px
         background-size 75%
         cursor pointer
+
+        &:after {
+            display block
+            position relative
+            background-image linear-gradient(to bottom,transparent 0%,#000 390%)
+            margin-top -9px
+            height 120px
+            width 110%
+            content ''
+            left -10px
+            border-radius 5px
+        }
+
+    }
+
+    .company-container {
+        position:relative;
+
+        &.selected:after {
+            content:'';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -15px;
+            width: 0;
+            height: 0;
+            border-top: solid 7px #eee;
+            border-left: solid 7px transparent;
+            border-right: solid 7px transparent;
+        }
     }
 
 }
