@@ -4,6 +4,7 @@ export const companies = [
         company_id: 1,
         start_date: "Feb. 2017",
         end_date: "Present",
+        years_label: "2015 - Present",
         description: [
             'Architecture, development & maintenance of demosite frontend & backend',
             'Develop & maintain juicemobile.com and insights blog',
@@ -38,6 +39,7 @@ export const companies = [
         company_id: 2,
         start_date: "Feb. 2016",
         end_date: "Feb. 2017",
+        years_label: "2016 - 2017",
         description: [
             
         ],
@@ -56,6 +58,7 @@ export const companies = [
         company_id: 3,
         start_date: "Oct. 2015",
         end_date: "Feb. 2016",
+        years_label: "2015 - 2016",
         description: [
             
         ],
@@ -74,6 +77,7 @@ export const companies = [
         company_id: 4,
         start_date: "Oct. 2015",
         end_date: "Feb. 2016",
+        years_label: "2015 - 2016",
         description: [
             
         ],
@@ -92,6 +96,7 @@ export const companies = [
         company_id: 5,
         start_date: "Oct. 2015",
         end_date: "Feb. 2016",
+        years_label: "2015",
         description: [
             
         ],
@@ -103,7 +108,45 @@ export const companies = [
         ],
         logo: '/images/logos/Eyereturn-logo.svg',
         backgroundColor: 'white',
-        textColor: 'black'
+        textColor: 'black',
+    },
+    {
+        name: "Syncapse",
+        company_id: 6,
+        start_date: "Oct. 2015",
+        end_date: "Feb. 2016",
+        years_label: "2015",
+        description: [
+            
+        ],
+        technologies: [
+            
+        ],
+        highlights: [
+            
+        ],
+        logo: '/images/logos/syncapse.png',
+        backgroundColor: '#D31C17',
+        textColor: 'white',
+    },
+    {
+        name: "Webcanada",
+        company_id: 7,
+        start_date: "Oct. 2015",
+        end_date: "Feb. 2016",
+        years_label: "2015",
+        description: [
+            
+        ],
+        technologies: [
+            
+        ],
+        highlights: [
+            
+        ],
+        logo: '/images/logos/webcanada.png',
+        backgroundColor: 'white',
+        textColor: '#0055A7',
     }
 ];
 

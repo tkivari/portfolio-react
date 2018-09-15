@@ -1,6 +1,17 @@
+.slick-initialized .slick-slide {
+    display: flex;
+    justify-content: space-around;
+}
+
+.slick-list, .slick-slide {
+    outline: none !important;
+}
+
+
 .company-list-container {
     // display flex
     margin 0 30px 0 30px
+    padding 5px
 
     .company-icon-container {
         width 200px
@@ -32,13 +43,18 @@
 
     .company-container {
         position:relative;
+        opacity 0.7
+        transition opacity 0.5s
+
+        &.selected {
+            opacity 1    
+        }
 
         &.selected:after {
             content:'';
             position: absolute;
             top: 100%;
-            left: 50%;
-            margin-left: -15px;
+            left: 123px;
             width: 0;
             height: 0;
             border-top: solid 7px #eee;

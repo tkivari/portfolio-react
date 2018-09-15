@@ -17,6 +17,7 @@ class CompanyList extends Component {
         let renderableDetails = [];
 
         companies.forEach((company) => {
+            console.log(company)
             renderableCompanies.push(<Company key={company.company_id} data={company} />)
             renderableDetails.push(<CompanyDetails key={company.company_id} data={company} />)
         });
@@ -29,11 +30,11 @@ class CompanyList extends Component {
 
     render() {
         let slider_settings = {
-            dots: true,
+            dots: false,
             infinite: true,
             speed: 400,
-            slidesToShow: 5,
-            slidesToScroll: 1
+            slidesToShow: 7,
+            slidesToScroll: 1,
         };
 
         let renderedData = this.renderData();
@@ -45,6 +46,7 @@ class CompanyList extends Component {
                 </Slider>
 
                 <div className="company-details-container">
+                    <div className="company-details-placeholder"></div>
                     {renderedData.details}
                 </div>
             </div>
