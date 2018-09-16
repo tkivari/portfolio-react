@@ -16,13 +16,31 @@
         & .company-fade-in {
             opacity 0
             transition opacity 1s
+            -webkit-transform: translateZ(0);
         }
         
         &.selected {
             display block
 
-            & .company-fade-in {
-                opacity 1    
+            // & .company-fade-in {
+            //     opacity 1    
+            // }
+        }
+
+
+        .company-canvas {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            border-radius: 5px;
+            overflow: hidden;
+
+            canvas {
+                width 100%
+                height 100%
             }
         }
     }
