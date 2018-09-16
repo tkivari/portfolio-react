@@ -101,7 +101,7 @@ class CompanyDetails extends Component {
                     y,
                     angle,
                     speed,
-                    radius: Math.floor(Math.random() * (15 - 2) + 2)
+                    radius: Math.floor(Math.random() * (6 - 2) + 2)
                 }
                 ++j;
             }
@@ -153,6 +153,15 @@ class CompanyDetails extends Component {
         this.clearCanvas(canvas);
         
         if(prevProps.company.company_id!==this.props.company.company_id && this.props.company.company_id == this.props.data.company_id){
+            this.renderCanvas(canvas);
+        }
+    }
+
+    componentDidMount() {
+        let canvas = this.refs.canvas;
+        this.clearCanvas(canvas);
+        
+        if(this.props.company.company_id == this.props.data.company_id){
             this.renderCanvas(canvas);
         }
     }
