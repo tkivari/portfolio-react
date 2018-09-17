@@ -6,14 +6,38 @@ export const companies = [
         end_date: "Present",
         years_label: "2015 - Present",
         description: [
-            'Architecture, development & maintenance of demosite frontend & backend',
-            'Develop & maintain juicemobile.com and insights blog',
-            'Produce custom coded ad units using HTML5 canvas, CSS and Javascript',
-            'Architecture, development & deployment of custom client microsites',
-            'Participate in high value RFP brainstorms to propose custom creative & game ideas',
-            'Coordinate with cross-departmental project stakeholders from Swarm, Hive & SysEng to ensure the Creative Studio\'s technical needs are met',
-            'Develop & Demo frontend and backend functionalities for the Creative Studio\'s Future Canvas initiative',
-            'Mentoring more junior developers to help develop their skills and abilities'
+            {
+                type: 'code',
+                title: 'Development',
+                points: [
+                    'Architecture, development & maintenance of <a href="https://demosite.juicemobile.com">Juice Mobile\'s Demo Site</a> (frontend & backend)',
+                    'Develop & maintain juicemobile.com and insights blog',
+                    'Architecture, development & deployment of custom client microsites',
+                    'Develop & Demo frontend and backend functionalities for the Creative Studio\'s Future Canvas initiative'
+                ]
+            },
+            {
+                type: 'palette',
+                title: 'Artistic',
+                points: [
+                    'Produce custom coded ad units, game and animations using HTML5 canvas, CSS and Javascript'
+                ]
+            },
+            {
+                type: 'lightbulb',
+                title: 'Creative',
+                points: [
+                    'Participate in high value RFP brainstorms to propose custom creative & game ideas'
+                ]
+            },
+            {
+                type: 'marker',
+                title: 'Leadership',
+                points: [
+                    'Coordinate with cross-departmental project stakeholders from Swarm, Hive & SysEng to ensure the Creative Studio\'s technical needs are met',,
+                    'Mentoring more junior developers to help develop their skills and abilities',
+                ]
+            }
         ],
         technologies: [
             'Backend Frameworks: Django, Tornado, Flask, NodeJS',
@@ -41,7 +65,16 @@ export const companies = [
         end_date: "Feb. 2017",
         years_label: "2016 - 2017",
         description: [
-            
+            {
+                type: 'code',
+                title: 'Development',
+                points: [
+                    'Architecture, development & maintenance of <a href="https://demosite.juicemobile.com">Juice Mobile\'s Demo Site</a> (frontend & backend)',
+                    'Develop & maintain juicemobile.com and insights blog',
+                    'Architecture, development & deployment of custom client microsites',
+                    'Develop & Demo frontend and backend functionalities for the Creative Studio\'s Future Canvas initiative'
+                ]
+            },
         ],
         technologies: [
             
@@ -60,7 +93,16 @@ export const companies = [
         end_date: "Feb. 2016",
         years_label: "2015 - 2016",
         description: [
-            
+            {
+                type: 'code',
+                title: 'Development',
+                points: [
+                    'Architecture, development & maintenance of <a href="https://demosite.juicemobile.com">Juice Mobile\'s Demo Site</a> (frontend & backend)',
+                    'Develop & maintain juicemobile.com and insights blog',
+                    'Architecture, development & deployment of custom client microsites',
+                    'Develop & Demo frontend and backend functionalities for the Creative Studio\'s Future Canvas initiative'
+                ]
+            },
         ],
         technologies: [
             
@@ -68,7 +110,7 @@ export const companies = [
         highlights: [
             
         ],
-        logo: '/images/logos/dealtap.png',
+        logo: '/images/logos/rsz_dealtap.png',
         backgroundColor: '#8954D1',
         textColor: 'white'
     },
@@ -79,7 +121,16 @@ export const companies = [
         end_date: "Feb. 2016",
         years_label: "2015 - 2016",
         description: [
-            
+            {
+                type: 'code',
+                title: 'Development',
+                points: [
+                    'Architecture, development & maintenance of <a href="https://demosite.juicemobile.com">Juice Mobile\'s Demo Site</a> (frontend & backend)',
+                    'Develop & maintain juicemobile.com and insights blog',
+                    'Architecture, development & deployment of custom client microsites',
+                    'Develop & Demo frontend and backend functionalities for the Creative Studio\'s Future Canvas initiative'
+                ]
+            },
         ],
         technologies: [
             
@@ -98,7 +149,16 @@ export const companies = [
         end_date: "Feb. 2016",
         years_label: "2015",
         description: [
-            
+            {
+                type: 'code',
+                title: 'Development',
+                points: [
+                    'Architecture, development & maintenance of <a href="https://demosite.juicemobile.com">Juice Mobile\'s Demo Site</a> (frontend & backend)',
+                    'Develop & maintain juicemobile.com and insights blog',
+                    'Architecture, development & deployment of custom client microsites',
+                    'Develop & Demo frontend and backend functionalities for the Creative Studio\'s Future Canvas initiative'
+                ]
+            },
         ],
         technologies: [
             
@@ -117,7 +177,16 @@ export const companies = [
         end_date: "Feb. 2016",
         years_label: "2015",
         description: [
-            
+            {
+                type: 'code',
+                title: 'Development',
+                points: [
+                    'Architecture, development & maintenance of <a href="https://demosite.juicemobile.com">Juice Mobile\'s Demo Site</a> (frontend & backend)',
+                    'Develop & maintain juicemobile.com and insights blog',
+                    'Architecture, development & deployment of custom client microsites',
+                    'Develop & Demo frontend and backend functionalities for the Creative Studio\'s Future Canvas initiative'
+                ]
+            },
         ],
         technologies: [
             
@@ -136,7 +205,16 @@ export const companies = [
         end_date: "Feb. 2016",
         years_label: "2015",
         description: [
-            
+            {
+                type: 'code',
+                title: 'Development',
+                points: [
+                    'Architecture, development & maintenance of <a href="https://demosite.juicemobile.com">Juice Mobile\'s Demo Site</a> (frontend & backend)',
+                    'Develop & maintain juicemobile.com and insights blog',
+                    'Architecture, development & deployment of custom client microsites',
+                    'Develop & Demo frontend and backend functionalities for the Creative Studio\'s Future Canvas initiative'
+                ]
+            },
         ],
         technologies: [
             
@@ -144,7 +222,7 @@ export const companies = [
         highlights: [
             
         ],
-        logo: '/images/logos/webcanada.png',
+        logo: '/images/logos/rsz_webcanada.png',
         backgroundColor: 'white',
         textColor: '#0055A7',
     }

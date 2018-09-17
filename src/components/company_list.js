@@ -35,6 +35,51 @@ class CompanyList extends Component {
             speed: 400,
             slidesToShow: 7,
             slidesToScroll: 1,
+            responsive: [
+                {
+                  breakpoint: 1700,
+                  settings: {
+                    slidesToShow: 6,
+                    slidesToScroll: 1
+                 }
+                },
+                {
+                  breakpoint: 1500,
+                  settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 1
+                  }
+                },
+                {
+                  breakpoint: 1300,
+                  settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                  }
+                },
+                {
+                    breakpoint: 1055,
+                    settings: {
+                      slidesToShow: 3,
+                      slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 820,
+                    settings: {
+                      slidesToShow: 2,
+                      slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1
+                    }
+                }
+
+              ]
         };
 
         let renderedData = this.renderData();

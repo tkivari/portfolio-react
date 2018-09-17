@@ -17,6 +17,21 @@
             opacity 0
             transition opacity 1s
             -webkit-transform: translateZ(0);
+            position: relative;
+            z-index: 2;
+
+            & .content-info {
+                text-align: left;
+                margin-left: 30px;
+
+                & .date-info {
+                    top: -15px;
+                    margin-bottom: 10px;
+                    position: relative;
+                    font-style: italic;
+                    font-size: 12px;
+                }
+            }
         }
         
         &.selected {
@@ -32,7 +47,7 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            z-index: 1;
+            // z-index: 1;
             top: 0;
             left: 0;
             border-radius: 5px;
@@ -41,6 +56,8 @@
             canvas {
                 width 100%
                 height 100%
+                transition opacity 1s
+                opacity 1
             }
         }
     }

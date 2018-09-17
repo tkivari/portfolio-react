@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React, { Fragment, Component } from 'react';
 import { connect } from 'react-redux';
+import HighlightedListItem from './shared/highlighted_list_item';
 import '../static/css/company-details.css';
 
 class CompanyDetails extends Component {
@@ -13,39 +14,25 @@ class CompanyDetails extends Component {
         return this.props.company.hasOwnProperty("company_id") && this.props.company.company_id === this.props.data.company_id;
     }
 
-    generateSquares() {
-        let matrix = [5, 6];
+
+    drawRoundedRectangle(context, x, y, width, height, radius = 5, color) {
         
-    }
-
-    getRandomCoordinate(width, height) {
-        return {
-            x: Math.floor(Math.random() * (width)),
-            y: Math.floor(Math.random() * (height)),
-        }
-    }
-
-    // drawLogo(context, data) {
+        context.beginPath();
+        context.moveTo(x + radius, y);
+        context.lineTo(x + width - radius, y);
+        context.quadraticCurveTo(x + width, y, x + width, y + radius);
+        context.lineTo(x + width, y + height - radius);
+        context.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+        context.lineTo(x + radius, y + height);
+        context.quadraticCurveTo(x, y + height, x, y + height - radius);
+        context.lineTo(x, y + radius);
+        context.quadraticCurveTo(x, y, x + radius, y);
+        context.closePath();
         
-    //     context.clearRect(0,0,context.canvas.width, context.canvas.height)
+        context.fillStyle = color;
+        context.fill();
+      }
 
-    //     var y_pos = 20;
-    //     var x_pos = context.canvas.width - width - 20; // 20 pixel margin
-
-        
-    //     let {x, y} = this.getRandomCoordinate(width, height);
-    //     let index = (y * width + x) * 4;
-
-    //     // context.putImageData
-
-
-
-    //     setTimeout(() => {
-    //         requestAnimationFrame(() => {
-    //             this.drawLogo(context, pixelData, drawnPixelData, width, height)
-    //         }, 10);
-    //     });
-    // }
 
     explodeLogo(context, data, canvas_width, canvas_height, image_width, image_height) {
 
@@ -82,16 +69,15 @@ class CompanyDetails extends Component {
 
         let formattedData =[];
 
-        // console.log(pixelData);
         let j = 0;
         
         for (let i = 0; i < pixelData.length; i+=4) {
             let x = (i / 4) % image_width;
             let y = Math.floor((i / 4) / image_width);
             let angle = Math.floor(Math.random() * (361));
-            let speed = Math.floor(Math.random() * (10 - 5) + 5);
+            let speed = Math.floor(Math.random() * (50 - 5) + 5);
 
-            if ((i / 4) % 10 == 0) {
+            if ((i / 4) % 17 == 0) {
                 formattedData[j] = {
                     r: pixelData[i],
                     g: pixelData[i+1],
@@ -101,7 +87,7 @@ class CompanyDetails extends Component {
                     y,
                     angle,
                     speed,
-                    radius: Math.floor(Math.random() * (6 - 2) + 2)
+                    radius: Math.floor(Math.random() * (8 - 2) + 2)
                 }
                 ++j;
             }
@@ -133,17 +119,40 @@ class CompanyDetails extends Component {
         let c = document.createElement("canvas")
         let ctx = c.getContext("2d");
 
+        let whiteValues = ['white', '#FFF', '#fff', '#ffffff', '#FFFFFF'];
+
         image.onload = () => {
-            c.style.width = image.width;
-            c.style.height = image.height;
+            
+            c.setAttribute("height", image.height);
+            c.setAttribute("width", image.width);
+            
             let origin_x = (context.canvas.width / 2) - (image.width / 2);
             let origin_y = (context.canvas.height / 2) - (image.height / 2);
             this.clearCanvas(canvas);
+            
+            if (whiteValues.indexOf(this.props.company.backgroundColor) == -1) {
+                console.log(this.props.data.backgroundColor);
+                let origin_x = (canvas.width / 2) - (image.width / 2);
+                let origin_y = (canvas.height / 2) - (image.height / 2);
+                context.fillStyle = this.props.data.backgroundColor;
+                //context.fillRect(origin_x-20,origin_y-20,image.width+40, image.height+40);
+                this.drawRoundedRectangle(context,origin_x-20,origin_y-20,image.width+40,image.height+40,10,this.props.data.backgroundColor);
+                ctx.fillStyle = this.props.data.backgroundColor;
+                ctx.fillRect(0,0,image.width+20, image.height+20);
+            }
+            ctx.drawImage(image, 10, 10);
             context.drawImage(image, origin_x, origin_y, image.width, image.height);
-            ctx.drawImage(image, 0, 0);
-            // this.refs.companydetails.appendChild(c);
-            let pixelData = ctx.getImageData(0,0,image.width,image.height);
-            setTimeout(() => { this.prepareData(context, pixelData.data, c.width, c.height, image.width, image.height); }, 500);
+            
+            let pixelData = ctx.getImageData(0,0,image.width+20,image.height+20);
+            let iw = c.width;
+            let ih = c.height;
+            c.remove(); // dispose element to reduce memory footprint
+            setTimeout(() => { this.prepareData(context, pixelData.data, iw, ih, image.width, image.height); }, 500);
+            setTimeout(() => {
+                this.refs.companycontent.style.opacity = 1;
+                this.refs.canvas.style.opacity = 0;
+            }, 1500);
+
         }
         image.src = this.props.data.logo;
     }
@@ -154,7 +163,13 @@ class CompanyDetails extends Component {
         
         if(prevProps.company.company_id!==this.props.company.company_id && this.props.company.company_id == this.props.data.company_id){
             this.renderCanvas(canvas);
+        } else if(this.props.company.company_id != this.props.data.company_id) {
+            this.refs.companycontent.style.opacity = 0;
+            this.refs.canvas.style.opacity = 1;
         }
+
+        console.log("height",this.refs.companydetails.clientHeight);
+        this.refs.companydetails.style.height = this.refs.companycontent.style.height;
     }
 
     componentDidMount() {
@@ -163,7 +178,20 @@ class CompanyDetails extends Component {
         
         if(this.props.company.company_id == this.props.data.company_id){
             this.renderCanvas(canvas);
+        } else {
+            this.refs.companycontent.style.opacity = 0;
+            this.refs.canvas.style.opacity = 1;
         }
+    }
+
+    renderJobDescription() {
+        let desc_arr = [];
+
+        this.props.data.description.forEach((desc) => {
+            desc_arr.push(<HighlightedListItem data={desc} />);
+        })
+
+        return desc_arr;
     }
 
     render() {
@@ -171,78 +199,15 @@ class CompanyDetails extends Component {
         
         return (
             <div ref="companydetails" className={"company-details " + (this.isSelected() ? "selected":"")} id={"company-details-"+company.company_id}>
+                <div ref="companycontent" className="company-fade-in">
+                    <div className="content-info">
+                        <h2>{company.name}</h2>
+                        <div className="date-info">{company.start_date} - {company.end_date}</div>
+                            {this.renderJobDescription()}
+                        </div>
+                </div>
                 <div className="company-canvas">
                     <canvas ref="canvas" id={"company-canvas-"+company.company_id}></canvas>
-                </div>
-                <div className="company-fade-in">
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
-                    {this.props.data.description[0]}
                 </div>
             </div>
         );
