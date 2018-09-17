@@ -1,6 +1,7 @@
 export const companies = [
     {
         name: "Juice Mobile",
+        title: "Full Stack Creative Developer",
         company_id: 1,
         start_date: "Feb. 2017",
         end_date: "Present",
@@ -15,7 +16,7 @@ export const companies = [
                     'Architecture, development & deployment of custom client microsites',
                     'Develop & Demo frontend and backend functionalities for the Creative Studio\'s Future Canvas initiative'
                 ]
-            },
+            },  
             {
                 type: 'palette',
                 title: 'Artistic',
@@ -35,7 +36,7 @@ export const companies = [
                 title: 'Leadership',
                 points: [
                     'Coordinate with cross-departmental project stakeholders from Swarm, Hive & SysEng to ensure the Creative Studio\'s technical needs are met',,
-                    'Mentoring more junior developers to help develop their skills and abilities',
+                    'Working with junior developers to help develop their skills and abilities',
                 ]
             }
         ],
@@ -60,6 +61,7 @@ export const companies = [
     },
     {
         name: "Checkout 51",
+        title: "Full Stack Developer",
         company_id: 2,
         start_date: "Feb. 2016",
         end_date: "Feb. 2017",
@@ -88,6 +90,7 @@ export const companies = [
     },
     {
         name: "DealTap",
+        title: "Technical Lead",
         company_id: 3,
         start_date: "Oct. 2015",
         end_date: "Feb. 2016",
@@ -116,6 +119,7 @@ export const companies = [
     },
     {
         name: "AdParlor by AdKnowledge",
+        title: "Senior Software Engineer",
         company_id: 4,
         start_date: "Oct. 2015",
         end_date: "Feb. 2016",
@@ -144,6 +148,7 @@ export const companies = [
     },
     {
         name: "EyeReturn Marketing",
+        title: "Web Application Developer",
         company_id: 5,
         start_date: "Oct. 2015",
         end_date: "Feb. 2016",
@@ -172,6 +177,7 @@ export const companies = [
     },
     {
         name: "Syncapse",
+        title: "Web Developer",
         company_id: 6,
         start_date: "Oct. 2015",
         end_date: "Feb. 2016",
@@ -200,6 +206,7 @@ export const companies = [
     },
     {
         name: "Webcanada",
+        title: "Web Developer",
         company_id: 7,
         start_date: "Oct. 2015",
         end_date: "Feb. 2016",
@@ -225,6 +232,35 @@ export const companies = [
         logo: '/images/logos/rsz_webcanada.png',
         backgroundColor: 'white',
         textColor: '#0055A7',
+    },
+    {
+        name: "Print Logic",
+        title: "Founder, Director of Development",
+        company_id: 8,
+        start_date: "Oct. 2015",
+        end_date: "Feb. 2016",
+        years_label: "2015",
+        description: [
+            {
+                type: 'code',
+                title: 'Development',
+                points: [
+                    'Architecture, development & maintenance of <a href="https://demosite.juicemobile.com">Juice Mobile\'s Demo Site</a> (frontend & backend)',
+                    'Develop & maintain juicemobile.com and insights blog',
+                    'Architecture, development & deployment of custom client microsites',
+                    'Develop & Demo frontend and backend functionalities for the Creative Studio\'s Future Canvas initiative'
+                ]
+            },
+        ],
+        technologies: [
+            
+        ],
+        highlights: [
+            
+        ],
+        logo: '/images/logos/printlogic.png',
+        backgroundColor: '#216c8a',
+        textColor: '#fff',
     }
 ];
 

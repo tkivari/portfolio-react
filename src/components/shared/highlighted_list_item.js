@@ -15,6 +15,8 @@ class HighlightedListItem extends Component {
         let category = this.props.data;
         let cat = (
                 <div>
+                    <div className="highlight-icon"><FontAwesomeIcon icon={this.props.data.type}></FontAwesomeIcon></div>
+                    <div className="highlight-triangle"></div>
                     <div className="highlight-title">{category.title}</div>
                     <div className="highlight-points">
                         {this.renderPoints(category.points)}
@@ -41,8 +43,6 @@ class HighlightedListItem extends Component {
     render() {
         return (
             <div className="highlighted-item">
-                <div className="highlight-icon"><FontAwesomeIcon icon={this.props.data.type}></FontAwesomeIcon></div>
-                <div className="highlight-triangle"></div>
                 
                 {this.renderCategory()}
 

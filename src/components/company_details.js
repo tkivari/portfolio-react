@@ -7,7 +7,12 @@ class CompanyDetails extends Component {
     constructor(props) {
         super(props);
 
+        this.state = {
+            stop_animating: false
+        }
+
         this.renderCanvas = this.renderCanvas.bind(this);
+        this.explodeLogo = this.explodeLogo.bind(this);
     }
     
     isSelected() {
@@ -37,7 +42,7 @@ class CompanyDetails extends Component {
     explodeLogo(context, data, canvas_width, canvas_height, image_width, image_height) {
 
         let origin_x = (context.canvas.width / 2) - (image_width / 2);
-        let origin_y = (context.canvas.height / 2) - (image_height / 2);
+        let origin_y = this.calculateYOrigin(context, image_height);
 
         // clear canvas
         context.clearRect(0,0,context.canvas.width, context.canvas.height)
@@ -58,10 +63,13 @@ class CompanyDetails extends Component {
             data[i].y = Math.round(Math.sin(px.angle * Math.PI / 180) * distance*px.speed + px.y);
         });
 
-        if (this.props.company.company_id == this.props.data.company_id) {
+        if (this.props.company.company_id == this.props.data.company_id && !this.state.stop_animating) {
             requestAnimationFrame(() => {
                 this.explodeLogo(context, data, canvas_width, canvas_height, image_width, image_height);
             });
+        } else if (this.props.company.company_id == this.props.data.company_id && this.state.stop_animating) {
+            // reset the animation so we can show it again if the user visits this experience page again
+            this.setState({stop_animating: false});
         }
     }
 
@@ -94,6 +102,11 @@ class CompanyDetails extends Component {
         }
 
         this.explodeLogo(context, formattedData, canvas_width, canvas_height, image_width, image_height);
+
+        // stop calls to requestAnimationFrame after the animation has been faded out
+        setTimeout(() => {
+            this.setState({stop_animating: true});
+        }, 2000);
     }
 
     resizeCanvas(canvas) {
@@ -110,6 +123,7 @@ class CompanyDetails extends Component {
     renderCanvas(canvas) {
 
         this.resizeCanvas(canvas);
+        this.setState({stop_animating: false});
         
         let context = canvas.getContext("2d");
         context.strokeStyle = "rgb(255, 0, 0)";
@@ -127,13 +141,13 @@ class CompanyDetails extends Component {
             c.setAttribute("width", image.width);
             
             let origin_x = (context.canvas.width / 2) - (image.width / 2);
-            let origin_y = (context.canvas.height / 2) - (image.height / 2);
+            let origin_y = this.calculateYOrigin(context, image.height);
             this.clearCanvas(canvas);
             
             if (whiteValues.indexOf(this.props.company.backgroundColor) == -1) {
                 console.log(this.props.data.backgroundColor);
                 let origin_x = (canvas.width / 2) - (image.width / 2);
-                let origin_y = (canvas.height / 2) - (image.height / 2);
+                let origin_y = this.calculateYOrigin(context, image.height);
                 context.fillStyle = this.props.data.backgroundColor;
                 //context.fillRect(origin_x-20,origin_y-20,image.width+40, image.height+40);
                 this.drawRoundedRectangle(context,origin_x-20,origin_y-20,image.width+40,image.height+40,10,this.props.data.backgroundColor);
@@ -155,6 +169,16 @@ class CompanyDetails extends Component {
 
         }
         image.src = this.props.data.logo;
+    }
+
+    calculateYOrigin(context, image_height) {
+        if (window.screen.width <= 400) {
+            console.log('heeere');
+            return 75;
+        }
+        return 200; 
+        
+        // return (context.canvas.height / 2) - (image_height / 2);
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -202,6 +226,7 @@ class CompanyDetails extends Component {
                 <div ref="companycontent" className="company-fade-in">
                     <div className="content-info">
                         <h2>{company.name}</h2>
+                        <h3>{company.title}</h3>
                         <div className="date-info">{company.start_date} - {company.end_date}</div>
                             {this.renderJobDescription()}
                         </div>

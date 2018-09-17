@@ -64,3 +64,29 @@
     }
 
 }
+
+@media (max-width:400px) {
+    .company-list-container {
+        // display flex
+        margin 0
+        padding 0px
+
+        .company-icon-container {
+            width 150px
+            height 75px
+
+            &:after {
+                display block
+                position relative
+                background-image linear-gradient(to bottom,transparent 0%,#000 390%)
+                margin-top -9px
+                height 95px
+                width 170px
+                content ''
+                left -10px
+                border-radius 5px
+            }
+        }
+
+    }
+}

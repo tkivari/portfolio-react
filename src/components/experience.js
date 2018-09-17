@@ -13,7 +13,7 @@ class Experience extends Component {
     render() {
         return (
             <div className="container experience-container">
-                <h1>Work Experience</h1>
+                {/* <h1>Work Experience</h1> */}
                 <div className="company-list">
                     <CompanyList companies={companies} />                        
                 </div>
