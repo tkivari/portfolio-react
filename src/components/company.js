@@ -11,7 +11,6 @@ class Company extends Component {
 
         // auto-select the first company in the list, if none is already selected
         if (!this.props.company.hasOwnProperty("company_id") || !this.props.company.company_id) {
-            console.log('selecting ', this.props.data.company_id)
             this.selectCompany(null, 1);
         }
 
@@ -24,8 +23,6 @@ class Company extends Component {
 
     selectCompany(e, cid) {
         cid = cid ? cid : this.props.data.company_id;
-        
-        console.log(cid)
         this.props.ShowCompanyAction(cid);
     }
 

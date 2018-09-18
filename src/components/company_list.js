@@ -17,7 +17,6 @@ class CompanyList extends Component {
         let renderableDetails = [];
 
         companies.forEach((company) => {
-            console.log(company)
             renderableCompanies.push(<Company key={company.company_id} data={company} />)
             renderableDetails.push(<CompanyDetails key={company.company_id} data={company} />)
         });

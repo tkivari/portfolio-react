@@ -171,7 +171,6 @@ class CompanyDetails extends Component {
 
     calculateYOrigin(context, image_height) {
         if (window.screen.width <= 400) {
-            console.log('heeere');
             return 75;
         }
         return 200; 
@@ -221,6 +220,30 @@ class CompanyDetails extends Component {
         return desc_arr;
     }
 
+    renderNavTabs() {
+        let tabs = [];
+        
+        if (this.props.data.hasOwnProperty("description") && this.props.data.description.length) {
+            tabs.push({
+                name: "description",
+            });
+        }
+
+        if (this.props.data.hasOwnProperty("technologies") && this.props.data.technologies.length) {
+            tabs.push({
+                name: "technologies",
+            });
+        }
+
+        if (this.props.data.hasOwnProperty("highlights") && this.props.data.highlights.length) {
+            tabs.push({
+                name: "highlights",
+            });
+        }
+
+        console.log("tabs", tabs.length);
+    }
+
     render() {
         let company = this.props.data
         
@@ -231,8 +254,13 @@ class CompanyDetails extends Component {
                         <h2>{company.name}</h2>
                         <h3>{company.title}</h3>
                         <div className="date-info">{company.start_date} - {company.end_date}</div>
+                        <div className="company-nav">
+                            {this.renderNavTabs()}
+                        </div>
+                        <div className="job-description">
                             {this.renderJobDescription()}
                         </div>
+                    </div>
                 </div>
                 <div className="company-canvas">
                     <canvas ref="canvas" id={"company-canvas-"+company.company_id}></canvas>
