@@ -24,12 +24,13 @@ class HighlightedListItem extends Component {
     renderCategory() {
         let category = this.props.data;
         let colors = this.props.colors;
+        let darkColor = this.darkenColor(colors.background);
         let circleBgStyle = {
-            backgroundColor: this.darkenColor(colors.background)
+            backgroundColor: darkColor
         };
 
         let fontStyle = {
-            color: colors.titleText
+            color: colors.titleText,
         }
 
         let fontBgStyle = {

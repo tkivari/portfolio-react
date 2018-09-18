@@ -147,11 +147,7 @@ class CompanyDetails extends Component {
             this.clearCanvas(canvas);
             
             if (this.state.whiteValues.indexOf(this.props.company.backgroundColor) == -1) {
-                console.log(this.props.data.backgroundColor);
-                let origin_x = (canvas.width / 2) - (image.width / 2);
-                let origin_y = this.calculateYOrigin(context, image.height);
                 context.fillStyle = this.props.data.backgroundColor;
-                //context.fillRect(origin_x-20,origin_y-20,image.width+40, image.height+40);
                 this.drawRoundedRectangle(context,origin_x-20,origin_y-20,image.width+40,image.height+40,10,this.props.data.backgroundColor);
                 ctx.fillStyle = this.props.data.backgroundColor;
                 ctx.fillRect(0,0,image.width+20, image.height+20);

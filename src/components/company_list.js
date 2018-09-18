@@ -75,7 +75,11 @@ class CompanyList extends Component {
                     breakpoint: 576,
                     settings: {
                       slidesToShow: 1,
-                      slidesToScroll: 1
+                      slidesToScroll: 1,
+                      afterChange: (current) => {
+                        // autoselect if there is only one slide displayed
+                        document.querySelector('.slick-current .company-container').click();
+                      },
                     }
                 }
 
