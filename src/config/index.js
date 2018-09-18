@@ -57,7 +57,9 @@ export const companies = [
         ],
         logo: '/images/logos/juice-mobile.svg',
         backgroundColor: 'white',
-        textColor: 'black'
+        titleBackgroundColor: '#F37C28',
+        textColor: 'black',
+        titleTextColor: 'white'
     },
     {
         name: "Checkout 51",
@@ -86,7 +88,9 @@ export const companies = [
         ],
         logo: '/images/logos/checkout51.min.svgz',
         backgroundColor: '#76b844',
-        textColor: 'white'
+        titleBackgroundColor: '#76b844',
+        textColor: 'white',
+        titleTextColor: 'white'
     },
     {
         name: "DealTap",
@@ -115,7 +119,9 @@ export const companies = [
         ],
         logo: '/images/logos/rsz_dealtap.png',
         backgroundColor: '#8954D1',
-        textColor: 'white'
+        titleBackgroundColor: '#8954D1',
+        textColor: 'white',
+        titleTextColor: 'white'
     },
     {
         name: "AdParlor by AdKnowledge",
@@ -143,8 +149,10 @@ export const companies = [
             
         ],
         logo: '/images/logos/adparlor-logo.svg',
-        backgroundColor: 'rgba(52,73,94, 1)',
-        textColor: 'white'
+        backgroundColor: '#34495e',
+        titleBackgroundColor: '#34495e',
+        textColor: 'white',
+        titleTextColor: 'white'
     },
     {
         name: "EyeReturn Marketing",
@@ -173,7 +181,9 @@ export const companies = [
         ],
         logo: '/images/logos/Eyereturn-logo.svg',
         backgroundColor: 'white',
+        titleBackgroundColor: '#333366',
         textColor: 'black',
+        titleTextColor: 'white'
     },
     {
         name: "Syncapse",
@@ -202,7 +212,9 @@ export const companies = [
         ],
         logo: '/images/logos/syncapse.png',
         backgroundColor: '#D31C17',
+        titleBackgroundColor: '#D31C17',
         textColor: 'white',
+        titleTextColor: 'white'
     },
     {
         name: "Webcanada",
@@ -231,7 +243,9 @@ export const companies = [
         ],
         logo: '/images/logos/rsz_webcanada.png',
         backgroundColor: 'white',
+        titleBackgroundColor: '#0055A7',
         textColor: '#0055A7',
+        titleTextColor: 'white'
     },
     {
         name: "Print Logic",
@@ -260,7 +274,9 @@ export const companies = [
         ],
         logo: '/images/logos/printlogic.png',
         backgroundColor: '#216c8a',
+        titleBackgroundColor: '#216c8a',
         textColor: '#fff',
+        titleTextColor: 'white'
     }
 ];
 

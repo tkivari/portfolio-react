@@ -8,7 +8,8 @@ class CompanyDetails extends Component {
         super(props);
 
         this.state = {
-            stop_animating: false
+            stop_animating: false,
+            whiteValues: ['white', '#FFF', '#fff', '#ffffff', '#FFFFFF']
         }
 
         this.renderCanvas = this.renderCanvas.bind(this);
@@ -36,8 +37,7 @@ class CompanyDetails extends Component {
         
         context.fillStyle = color;
         context.fill();
-      }
-
+    }
 
     explodeLogo(context, data, canvas_width, canvas_height, image_width, image_height) {
 
@@ -57,6 +57,8 @@ class CompanyDetails extends Component {
             context.beginPath();
             context.arc(new_x, new_y, px.radius, 0, 2 * Math.PI, false);
             context.fill();
+
+            if (px.radius > 1) px.radius-=0.1
             
             // update particle position based on angle and speed
             data[i].x = Math.round(Math.cos(px.angle * Math.PI / 180) * distance*px.speed + px.x);
@@ -83,7 +85,7 @@ class CompanyDetails extends Component {
             let x = (i / 4) % image_width;
             let y = Math.floor((i / 4) / image_width);
             let angle = Math.floor(Math.random() * (361));
-            let speed = Math.floor(Math.random() * (50 - 5) + 5);
+            let speed = Math.floor(Math.random() * (40 - 5) + 5);
 
             if ((i / 4) % 17 == 0) {
                 formattedData[j] = {
@@ -133,7 +135,7 @@ class CompanyDetails extends Component {
         let c = document.createElement("canvas")
         let ctx = c.getContext("2d");
 
-        let whiteValues = ['white', '#FFF', '#fff', '#ffffff', '#FFFFFF'];
+        
 
         image.onload = () => {
             
@@ -144,7 +146,7 @@ class CompanyDetails extends Component {
             let origin_y = this.calculateYOrigin(context, image.height);
             this.clearCanvas(canvas);
             
-            if (whiteValues.indexOf(this.props.company.backgroundColor) == -1) {
+            if (this.state.whiteValues.indexOf(this.props.company.backgroundColor) == -1) {
                 console.log(this.props.data.backgroundColor);
                 let origin_x = (canvas.width / 2) - (image.width / 2);
                 let origin_y = this.calculateYOrigin(context, image.height);
@@ -211,9 +213,14 @@ class CompanyDetails extends Component {
     renderJobDescription() {
         let desc_arr = [];
 
+        let colors = {
+            background: this.props.data.titleBackgroundColor,
+            titleText: this.props.data.titleTextColor 
+        };
+
         this.props.data.description.forEach((desc) => {
-            desc_arr.push(<HighlightedListItem data={desc} />);
-        })
+            desc_arr.push(<HighlightedListItem data={desc} colors={colors} />);
+        });
 
         return desc_arr;
     }
