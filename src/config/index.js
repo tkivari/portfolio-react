@@ -8,6 +8,14 @@ export const companies = [
         years_label: "2015 - Present",
         description: [
             {
+                type: 'marker',
+                title: 'Leadership',
+                points: [
+                    'Coordinate with cross-departmental project stakeholders from Swarm, Hive & SysEng to ensure the Creative Studio\'s technical needs are met',,
+                    'Mentoring junior developers to help develop the team\'s skills and abilities',
+                ]
+            },
+            {
                 type: 'code',
                 title: 'Development',
                 points: [
@@ -30,15 +38,7 @@ export const companies = [
                 points: [
                     'Participate in high value RFP brainstorms to propose custom creative & game ideas'
                 ]
-            },
-            {
-                type: 'marker',
-                title: 'Leadership',
-                points: [
-                    'Coordinate with cross-departmental project stakeholders from Swarm, Hive & SysEng to ensure the Creative Studio\'s technical needs are met',,
-                    'Working with junior developers to help develop their skills and abilities',
-                ]
-            }
+            }            
         ],
         technologies: [
             'Backend Frameworks: Django, Tornado, Flask, NodeJS',
