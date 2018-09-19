@@ -222,26 +222,27 @@ class CompanyDetails extends Component {
 
     renderNavTabs() {
         let tabs = [];
+        let rv = [];
         
         if (this.props.data.hasOwnProperty("description") && this.props.data.description.length) {
-            tabs.push({
-                name: "description",
-            });
+            tabs.push(<li>Responsibilities</li>);
         }
 
         if (this.props.data.hasOwnProperty("technologies") && this.props.data.technologies.length) {
-            tabs.push({
-                name: "technologies",
-            });
+            tabs.push(<li>Skills &amp; Technologies</li>);
         }
 
         if (this.props.data.hasOwnProperty("highlights") && this.props.data.highlights.length) {
-            tabs.push({
-                name: "highlights",
-            });
+            tabs.push(<li>Highlights &amp; Achievements</li>);
         }
 
-        console.log("tabs", tabs.length);
+
+
+        if (tabs.length > 1) {
+            return(
+                <div className="company-nav"><ul className="nav-tabs">{tabs}</ul></div>
+            )
+        }
     }
 
     render() {
@@ -250,13 +251,11 @@ class CompanyDetails extends Component {
         return (
             <div ref="companydetails" className={"company-details " + (this.isSelected() ? "selected":"")} id={"company-details-"+company.company_id}>
                 <div ref="companycontent" className="company-fade-in">
+                {this.renderNavTabs()}
                     <div className="content-info">
                         <h2>{company.name}</h2>
                         <h3>{company.title}</h3>
                         <div className="date-info">{company.start_date} - {company.end_date}</div>
-                        <div className="company-nav">
-                            {this.renderNavTabs()}
-                        </div>
                         <div className="job-description">
                             {this.renderJobDescription()}
                         </div>

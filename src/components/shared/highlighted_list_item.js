@@ -35,7 +35,8 @@ class HighlightedListItem extends Component {
 
         let fontBgStyle = {
             color: colors.titleText,
-            backgroundColor: colors.background
+            backgroundColor: colors.background,
+            backgroundImage: "linear-gradient(to right, "+colors.background+","+darkColor+")"
         };
 
         let cat = (

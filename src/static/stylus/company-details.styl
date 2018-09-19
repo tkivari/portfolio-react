@@ -7,10 +7,40 @@
         position relative
         min-height 400px
         margin 10px 0px 0px
-        top: 0;
-        padding: 10px;
+        top 0
+        padding 10px
         background #eee
         border-top 3px solid black
+
+        .company-nav {
+            display block
+            height 30px
+            background #e8e8e8
+            margin-bottom 25px
+            position relative
+            z-index 2
+            font-family 'Ubuntu', sans-serif
+
+            ul.nav-tabs {
+                list-style none
+                height 40px
+                background #ddd
+                padding-left 0
+                margin: -10px -10px 0;
+
+                &:after {
+                    clear both
+                }
+
+                li {
+                    float left
+                    position relative
+                    display block
+                    padding 10px
+                    cursor pointer
+                }
+            }
+        }
 
 
         & .company-fade-in {

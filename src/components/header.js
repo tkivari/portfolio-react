@@ -24,10 +24,12 @@ class Header extends Component {
         return (
             <div>
                 <div className={"menu " + this.menuClass()}>
-                    <div className="nav-item"><Link to="/">Experience</Link></div>
-                    <div className="nav-item"><Link to="/demos">Demos</Link></div>
-                    {/* <div className="nav-item"><Link to="/about">About Me</Link></div> */}
-                    <div className="nav-item"><Link to="/contact">Contact Me</Link></div>
+                    <nav>
+                        <div className="nav-item"><Link to="/">Experience</Link></div>
+                        <div className="nav-item"><Link to="/demos">Demos</Link></div>
+                        {/* <div className="nav-item"><Link to="/about">About Me</Link></div> */}
+                        <div className="nav-item"><Link to="/contact">Contact Me</Link></div>
+                    </nav>
                 </div>
                 <div className="header">
                      
