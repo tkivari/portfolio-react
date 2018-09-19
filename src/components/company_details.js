@@ -14,6 +14,9 @@ class CompanyDetails extends Component {
 
         this.renderCanvas = this.renderCanvas.bind(this);
         this.explodeLogo = this.explodeLogo.bind(this);
+        this.selectDescription = this.selectDescription.bind(this);
+        this.selectTech = this.selectTech.bind(this);
+        this.selectHighlight = this.selectHighlight.bind(this);
     }
     
     isSelected() {
@@ -220,25 +223,97 @@ class CompanyDetails extends Component {
         return desc_arr;
     }
 
+    renderJobTechnologies() {
+
+        if (this.props.data.hasOwnProperty("technologies")) {
+        
+            let tech_arr = [];
+
+            let colors = {
+                background: this.props.data.titleBackgroundColor,
+                titleText: this.props.data.titleTextColor 
+            };
+
+            this.props.data.technologies.forEach((tech) => {
+                tech_arr.push(<HighlightedListItem data={tech} colors={colors} />);
+            });
+
+            return tech_arr;
+        }
+    }
+
+    renderJobHighlights() {
+        if (this.props.data.hasOwnProperty("highlights")) {
+        
+            let highlight_arr = [];
+
+            let colors = {
+                background: this.props.data.titleBackgroundColor,
+                titleText: this.props.data.titleTextColor 
+            };
+
+            this.props.data.highlights.forEach((highlight) => {
+                highlight_arr.push(<HighlightedListItem data={highlight} colors={colors} />);
+            });
+
+            return highlight_arr;
+        }
+    }
+
+    showSection(section) {
+        this.hideSections();
+        this.refs[section].classList.add("selected");
+    }
+
+    hideSections() {
+        if (this.refs.hasOwnProperty("description")) { this.refs.description.classList.remove("selected"); }
+        if (this.refs.hasOwnProperty("technologies")) { this.refs.technologies.classList.remove("selected"); }
+        if (this.refs.hasOwnProperty("highlights")) { this.refs.highlights.classList.remove("selected"); }
+    }
+
+    selectTab(tab) {
+        let tabs = document.querySelectorAll('.nav-tab-li');
+        tabs.forEach((t) => {
+            t.classList.remove("selected");
+        });
+        this.refs[tab+"tab"].classList.add("selected");
+    }
+
+    selectDescription() {
+        this.selectTab("description");
+        this.showSection("description");
+    }
+
+    selectTech() {
+        this.selectTab("tech");
+        this.showSection("technologies");
+    }
+
+    selectHighlight() {
+        this.selectTab("highlight");
+        this.showSection("highlights");
+    }
+
     renderNavTabs() {
         let tabs = [];
         let rv = [];
         
         if (this.props.data.hasOwnProperty("description") && this.props.data.description.length) {
-            tabs.push(<li>Responsibilities</li>);
+            tabs.push(<li ref="descriptiontab" className='nav-tab-li selected' onClick={this.selectDescription}>Description</li>);
         }
 
         if (this.props.data.hasOwnProperty("technologies") && this.props.data.technologies.length) {
-            tabs.push(<li>Skills &amp; Technologies</li>);
+            tabs.push(<li ref="techtab" className='nav-tab-li' onClick={this.selectTech}>Tech</li>);
         }
 
         if (this.props.data.hasOwnProperty("highlights") && this.props.data.highlights.length) {
-            tabs.push(<li>Highlights &amp; Achievements</li>);
+            tabs.push(<li ref="highlighttab" className='nav-tab-li' onClick={this.selectHighlight}>Highlights</li>);
         }
 
 
 
         if (tabs.length > 1) {
+            tabs.push(<li className="nav-tab-placeholder"></li>)
             return(
                 <div className="company-nav"><ul className="nav-tabs">{tabs}</ul></div>
             )
@@ -256,8 +331,14 @@ class CompanyDetails extends Component {
                         <h2>{company.name}</h2>
                         <h3>{company.title}</h3>
                         <div className="date-info">{company.start_date} - {company.end_date}</div>
-                        <div className="job-description">
+                        <div className="content-block job-description selected" ref="description">
                             {this.renderJobDescription()}
+                        </div>
+                        <div className="content-block job-technologies" ref="technologies">
+                            {this.renderJobTechnologies()}
+                        </div>
+                        <div className="content-block job-highlights" ref="highlights">
+                            {this.renderJobHighlights()}
                         </div>
                     </div>
                 </div>

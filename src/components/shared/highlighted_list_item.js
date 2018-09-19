@@ -3,12 +3,23 @@ import '../../static/css/list_item.css';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLightbulb, faMarker, faPalette, faCode } from '@fortawesome/free-solid-svg-icons';
+import { faLightbulb, faMarker, faPalette, faCode, faPaintBrush, faDatabase, faComment, faTrophy } from '@fortawesome/free-solid-svg-icons';
+import { faPython , faNode, faWordpress, faHtml5  } from '@fortawesome/free-brands-svg-icons';
+
 
 library.add(faLightbulb);
 library.add(faMarker);
 library.add(faPalette);
 library.add(faCode);
+library.add(faPaintBrush);
+library.add(faPython);
+library.add(faNode);
+library.add(faWordpress);
+library.add(faHtml5);
+library.add(faDatabase);
+library.add(faComment);
+library.add(faTrophy);
+
 
 class HighlightedListItem extends Component {
     darkenColor(color, percent = -.2) {
@@ -58,6 +69,7 @@ class HighlightedListItem extends Component {
     }
     
     renderPoints(points) {
+        console.log(points)
         let point_list = [];
         points.forEach((point) => {
             point_list.push(

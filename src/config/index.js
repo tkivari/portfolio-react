@@ -26,34 +26,84 @@ export const companies = [
                 ]
             },  
             {
-                type: 'palette',
-                title: 'Artistic',
+                type: 'paint-brush',
+                title: 'Creative',
                 points: [
-                    'Produce custom coded ad units, game and animations using HTML5 canvas, CSS and Javascript'
+                    'Produce custom coded ad units, game and animations using HTML5 canvas, CSS and Javascript',
+                    'Participate in high value RFP brainstorms to propose custom creative & game ideas'
+                ]
+            }          
+        ],
+        technologies: [
+            {
+                type: 'python',
+                title: 'Backend (Python)',
+                points: [
+                    'Django - Rewrote the backend API for the Juice Mobile Demo Site using Django with Django REST Framework.',
+                    'Flask - Updated existing internal tools and client executions that had been written in Flask',
+                    'Tornado - Created backends for multiplayer games, such as clones of Tetris and Flappy Bird, and websocket-enabled client microsites using Tornado'
                 ]
             },
             {
-                type: 'lightbulb',
-                title: 'Creative',
+                type: 'node-js',
+                title: 'Backend (NodeJS)',
                 points: [
-                    'Participate in high value RFP brainstorms to propose custom creative & game ideas'
+                    'Created microsites for clients such as General Motors with backends written in Node using Express Framework',
+                    'Created simple custom internal tools for special events such as Juice Mobile\'s Holiday Food Drive and quarterly events using NodeJS and Express'
                 ]
-            }            
-        ],
-        technologies: [
-            'Backend Frameworks: Django, Tornado, Flask, NodeJS',
-            'JavaScript Frameworks: AngularJS, ReactJS',
-            'CSS frameworks: SASS, Stylus',
-            'Databases: PostgreSQL, MongoDB, DynamoDB, TinyDB, SQLite',
-            'Ad Creation Platforms: Celtra, Flexitive',
-            'Other:  HTML 5 Canvas, Photoshop'
+            },
+            {
+                type: 'wordpress',
+                title: 'Backend (WordPress)',
+                points: [
+                    'Created the Juice Mobile website using PHP and Wordpress with Visual Composer',
+                    'Created Juice Mobile\'s Insights Blog using PHP and Wordpress'
+                ]
+            },
+            {
+                type: 'html',
+                title: 'Frontend',
+                points: [
+                    'Updated Juice Mobile\'s demo site using AngularJS',
+                    'Rewrote Juice Mobile\'s demo site using ReactJS and Redux',
+                    'Created multiple demos and client sites using ReactJS',
+                    'Created custom games and interactive ad executions using the HTML5 canvas and ES6',
+                    'Used CSS3, Sass and Stylus on client sites, internal tools and ad units',
+                ]
+            },
+            {
+                type: 'database',
+                title: 'Databases',
+                points: [
+                    'Used MongoDB for data collection on client lead generation sites',
+                    'Used PostgreSQL for internal data storage on the Juice Mobile demo site',
+                    'Used SQLite for simple, custom internal tools that did not require large amounts of data to be stored',
+                ]
+            },
+            {
+                type: 'comment',
+                title: 'Other',
+                points: [
+                    'Used Celtra and Flexitive platforms extensively to create simple custom mobile ad units',
+                    'Wrote several ETL scripts using Python and PHP to migrate data between various database systems, for example, migrating the demo site from MongoDB to Postgres',
+                    'Used Photoshop to edit, alter and format client-provided assets as required to produce the highest quality ad units possible',
+                    'Used FFMpeg to transcode, compress and slice video assets provided by clients to ensure that ad units comply with IAB standards',
+                    'Used FL Studio and Adobe Audition to create and edit audio files to produce sound effects and music for custom games and ad units'
+                ]
+            }
         ],
         highlights: [
-            'Developed several multiplayer mobile-oriented web games, such as clones of Tetris and Flappy Bird',
-            'Spearheaded investigation into the limitations of Juice\'s rich media ad serving technology and formed a committee to make recommendations for future development',
-            'Led and developed Juice\'s multivariate "Intelligent Creative" initiative, resulting in better performance for client campaigns vs. KPIs',
-            'Proposed and managed the planning and initial design and development phase of Juice\'s internal ad-creation platform',
-            'Won a Cultural Value award for "Caring Like Crazy"'
+            {
+                type: 'trophy',
+                title: 'Highlights',
+                points: [
+                    'Developed several multiplayer mobile-oriented web games, such as clones of Tetris and Flappy Bird',
+                    'Spearheaded investigation into the limitations of Juice\'s rich media ad serving technology and formed a committee to make recommendations for future development',
+                    'Led and developed Juice\'s multivariate "Intelligent Creative" initiative, resulting in better performance for client campaigns vs. KPIs',
+                    'Proposed and managed the planning and initial design and development phase of Juice\'s internal ad-creation platform',
+                    'Won a Cultural Values award for "Caring Like Crazy"'
+                ]
+            }
         ],
         logo: '/images/logos/juice-mobile.svg',
         backgroundColor: 'white',
@@ -81,7 +131,15 @@ export const companies = [
             },
         ],
         technologies: [
-            
+            {
+                type: 'python',
+                title: 'Backend (Python)',
+                points: [
+                    'Django - Rewrote the backend API for the Juice Mobile Demo Site using Django with Django REST Framework.',
+                    'Flask - Updated existing internal tools and client executions that had been written in Flask',
+                    'Tornado - Created backends for multiplayer games, such as clones of Tetris and Flappy Bird, and websocket-enabled client microsites using Tornado'
+                ]
+            },
         ],
         highlights: [
             
@@ -112,7 +170,15 @@ export const companies = [
             },
         ],
         technologies: [
-            
+            {
+                type: 'python',
+                title: 'Backend (Python)',
+                points: [
+                    'Django - Rewrote the backend API for the Juice Mobile Demo Site using Django with Django REST Framework.',
+                    'Flask - Updated existing internal tools and client executions that had been written in Flask',
+                    'Tornado - Created backends for multiplayer games, such as clones of Tetris and Flappy Bird, and websocket-enabled client microsites using Tornado'
+                ]
+            },
         ],
         highlights: [
             
@@ -143,7 +209,15 @@ export const companies = [
             },
         ],
         technologies: [
-            
+            {
+                type: 'python',
+                title: 'Backend (Python)',
+                points: [
+                    'Django - Rewrote the backend API for the Juice Mobile Demo Site using Django with Django REST Framework.',
+                    'Flask - Updated existing internal tools and client executions that had been written in Flask',
+                    'Tornado - Created backends for multiplayer games, such as clones of Tetris and Flappy Bird, and websocket-enabled client microsites using Tornado'
+                ]
+            },
         ],
         highlights: [
             
@@ -174,7 +248,15 @@ export const companies = [
             },
         ],
         technologies: [
-            
+            {
+                type: 'python',
+                title: 'Backend (Python)',
+                points: [
+                    'Django - Rewrote the backend API for the Juice Mobile Demo Site using Django with Django REST Framework.',
+                    'Flask - Updated existing internal tools and client executions that had been written in Flask',
+                    'Tornado - Created backends for multiplayer games, such as clones of Tetris and Flappy Bird, and websocket-enabled client microsites using Tornado'
+                ]
+            },
         ],
         highlights: [
             
@@ -205,7 +287,15 @@ export const companies = [
             },
         ],
         technologies: [
-            
+            {
+                type: 'python',
+                title: 'Backend (Python)',
+                points: [
+                    'Django - Rewrote the backend API for the Juice Mobile Demo Site using Django with Django REST Framework.',
+                    'Flask - Updated existing internal tools and client executions that had been written in Flask',
+                    'Tornado - Created backends for multiplayer games, such as clones of Tetris and Flappy Bird, and websocket-enabled client microsites using Tornado'
+                ]
+            },
         ],
         highlights: [
             
@@ -236,7 +326,15 @@ export const companies = [
             },
         ],
         technologies: [
-            
+            {
+                type: 'python',
+                title: 'Backend (Python)',
+                points: [
+                    'Django - Rewrote the backend API for the Juice Mobile Demo Site using Django with Django REST Framework.',
+                    'Flask - Updated existing internal tools and client executions that had been written in Flask',
+                    'Tornado - Created backends for multiplayer games, such as clones of Tetris and Flappy Bird, and websocket-enabled client microsites using Tornado'
+                ]
+            },
         ],
         highlights: [
             
@@ -267,7 +365,15 @@ export const companies = [
             },
         ],
         technologies: [
-            
+            {
+                type: 'python',
+                title: 'Backend (Python)',
+                points: [
+                    'Django - Rewrote the backend API for the Juice Mobile Demo Site using Django with Django REST Framework.',
+                    'Flask - Updated existing internal tools and client executions that had been written in Flask',
+                    'Tornado - Created backends for multiplayer games, such as clones of Tetris and Flappy Bird, and websocket-enabled client microsites using Tornado'
+                ]
+            },
         ],
         highlights: [
             

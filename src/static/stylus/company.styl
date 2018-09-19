@@ -72,9 +72,19 @@
         margin 0
         padding 0px
 
+        .company-container {
+            &.selected {
+                &:after {
+                    left initial
+                }
+            }
+        }
+
         .company-icon-container {
             width 150px
-            height 75px
+            height 25px
+            background-size 64%
+            border 1px solid white
 
             &:after {
                 display block
