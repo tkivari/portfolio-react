@@ -145,24 +145,32 @@ class CompanyDetails extends Component {
             c.setAttribute("height", image.height);
             c.setAttribute("width", image.width);
             
-            let origin_x = (context.canvas.width / 2) - (image.width / 2);
-            let origin_y = this.calculateYOrigin(context, image.height);
+            let drawn_width = window.screen.width <= 500 ? 140 : image.width; 
+            let drawn_height = image.height * drawn_width / image.width;
+
+            let origin_x = (context.canvas.width / 2) - (drawn_width / 2);
+            let origin_y = this.calculateYOrigin(context, drawn_height);
             this.clearCanvas(canvas);
             
             if (this.state.whiteValues.indexOf(this.props.company.backgroundColor) == -1) {
                 context.fillStyle = this.props.data.backgroundColor;
-                this.drawRoundedRectangle(context,origin_x-20,origin_y-20,image.width+40,image.height+40,10,this.props.data.backgroundColor);
+                this.drawRoundedRectangle(context,origin_x-20,origin_y-20,drawn_width+40,drawn_height+40,10,this.props.data.backgroundColor);
                 ctx.fillStyle = this.props.data.backgroundColor;
                 ctx.fillRect(0,0,image.width+20, image.height+20);
             }
             ctx.drawImage(image, 10, 10);
-            context.drawImage(image, origin_x, origin_y, image.width, image.height);
+            console.log("SCREEN WIDTH:", window.screen.width);
+            if (window.screen.width <= 500) {
+                context.drawImage(image, origin_x, origin_y, drawn_width, drawn_height);
+            } else {
+                context.drawImage(image, origin_x, origin_y, drawn_width, drawn_height);
+            }
             
             let pixelData = ctx.getImageData(0,0,image.width+20,image.height+20);
             let iw = c.width;
             let ih = c.height;
             c.remove(); // dispose element to reduce memory footprint
-            setTimeout(() => { this.prepareData(context, pixelData.data, iw, ih, image.width, image.height); }, 500);
+            setTimeout(() => { this.prepareData(context, pixelData.data, iw, ih, drawn_width, drawn_height); }, 500);
             setTimeout(() => {
                 this.refs.companycontent.style.opacity = 1;
                 this.refs.canvas.style.opacity = 0;
@@ -194,6 +202,7 @@ class CompanyDetails extends Component {
 
         console.log("height",this.refs.companydetails.clientHeight);
         this.refs.companydetails.style.height = this.refs.companycontent.style.height;
+        // this.selectTab("description");
     }
 
     componentDidMount() {
@@ -272,9 +281,16 @@ class CompanyDetails extends Component {
     }
 
     selectTab(tab) {
-        let tabs = document.querySelectorAll('.nav-tab-li');
-        tabs.forEach((t) => {
-            t.classList.remove("selected");
+        let possible_tabs = [
+            "description",
+            "tech",
+            "highlight"
+        ];
+
+        possible_tabs.forEach((t) => {
+            if (this.refs.hasOwnProperty(t+"tab")) {
+                this.refs[t+"tab"].classList.remove("selected");
+            }
         });
         this.refs[tab+"tab"].classList.add("selected");
     }
