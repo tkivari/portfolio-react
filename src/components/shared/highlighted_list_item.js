@@ -50,12 +50,46 @@ class HighlightedListItem extends Component {
             backgroundImage: "linear-gradient(to right, "+colors.background+","+darkColor+")"
         };
 
+        console.log(this.props.data.type);
+
+        let icon = null;
+        let brands = [
+            {
+                name: "python",
+                icon: faPython
+            },
+            {
+                name: "node-js",
+                icon: faNode
+            },
+            {
+                name: "html",
+                icon: faHtml5
+            },
+            {
+                name: "wordpress",
+                icon: faWordpress
+            }
+        ];
+
+        brands.forEach((b) => {
+            if (b.name == this.props.data.type) {
+                icon = b.icon;
+            }
+        });
+
+        icon = icon ? icon : this.props.data.type;
+
+
+
+
+
         let cat = (
                 <div>
                     <div className="highlight-header">
                         <div className="circle-container">
                             <div className="highlight-circle" style={circleBgStyle}></div>
-                            <div className={"highlight-icon " + this.props.data.type} style={fontStyle}><FontAwesomeIcon icon={this.props.data.type}></FontAwesomeIcon></div>
+                            <div className={"highlight-icon " + this.props.data.type} style={fontStyle}><FontAwesomeIcon icon={icon}></FontAwesomeIcon></div>
                         </div>
                         <div className="highlight-title" style={fontBgStyle}>{category.title}</div>
                     </div>

@@ -7,14 +7,13 @@
     }
 
     .point-text {
-        border: 2px solid #d8d8d8;
+        border-bottom: 1px solid #ddd;
         margin: 5px 0;
         padding: 10px;
         border-radius: 5px;
         line-height: 22px;
         font-size: 15px;
         font-family: 'Nunito',sans-serif;
-        background: #e8e8e8;
     }
 
     .highlight-header {
@@ -58,6 +57,7 @@
                 position: absolute;
                 top: calc(50% - 15px);
                 z-index 3
+                left 15px
                 
                 &.code {
                     left: calc(50% - 16px);    
@@ -76,6 +76,26 @@
                 }
 
                 &.paint-brush {
+                    left: calc(50% - 12px);
+                }
+
+                &.python {
+                    left: calc(50% - 12px);
+                }
+
+                &.wordpress {
+                    left: calc(50% - 13px);
+                }
+
+                &.html {
+                    left: calc(50% - 10px);
+                }
+
+                &.database {
+                    left: calc(50% - 11px);
+                }
+
+                &.comment {
                     left: calc(50% - 12px);
                 }
             }
