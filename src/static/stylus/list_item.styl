@@ -6,14 +6,24 @@
         margin-top 30px    
     }
 
-    .point-text {
-        border-bottom: 1px solid #ddd;
-        margin: 5px 0;
-        padding: 10px;
-        border-radius: 5px;
-        line-height: 22px;
-        font-size: 15px;
-        font-family: 'Nunito',sans-serif;
+    .highlight-points {
+        .point-text {
+            border-bottom: 1px solid #ddd;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 0px;
+            line-height: 22px;
+            font-size: 15px;
+            font-family: 'Nunito',sans-serif;
+        }
+
+        div {
+            &:last-child {
+                .point-text {
+                    border-bottom none
+                }
+            }
+        }
     }
 
     .highlight-header {
@@ -114,16 +124,27 @@
 @media (max-width:400px) {
     .highlighted-item {
 
-        .point-text {
-            margin: 2px 0;
-            padding: 4px 10px;
-            border-radius: 5px;
-            line-height: 22px;
-            font-size: 12px;
-            font-family: 'Nunito',sans-serif;
-            border 0
-            border-bottom: 2px solid #e8e8e8;
-            background #eee
+        .highlight-points {
+            .point-text {
+                margin: 2px 0;
+                padding: 4px 10px;
+                line-height: 22px;
+                font-size: 12px;
+                font-family: 'Nunito',sans-serif;
+                border 0
+                border-bottom: 1px solid #ddd;
+                background #eee
+                border-radius 0
+            }
+
+            div {
+                &:last-child {
+                    .point-text {
+                        border-bottom none
+                    }
+                }
+            }
+
         }
 
         .highlight-header {

@@ -5,174 +5,179 @@
 	to { transform: rotate(360deg); }
 }
 
-.menu {
-    position absolute
-    top 0
-    left 0
-    z-index 99
-    width 0
-    height 100%
-    background rgba(0,0,0,.94)
-    color white
-    text-transform uppercase
-    transition width .35s, opacity .35s, visibility .35s, display .35s, opacity .35s
-    
-    a {
-        text-decoration none
-        color white
-        padding 15px
-        display inline-block
-        font-size 35px
-    }
+.header-container {
 
-    font-family 'Nunito', sans-serif
-}
+    flex 0 1 auto
 
-.menu.open {
-    width 100vw
-    opacity 1
-    visibility visible
-}
-
-.menu.closed {
-    width 0px
-    opacity 0
-    visibility hidden
-}
-
-.menu > nav > div:first-child {
-    padding-top 80px
-}
-
-.header {
-    position relative
-    top 0
-    padding 20px
-    margin 0px
-    background repeating-linear-gradient( 45deg, #212121, #212121 10px, #292929 10px, #292929 20px )
-    border-bottom 3px solid black
-    
-    .header-text {
-        color #1f72ad
-        display flex
-        width 260px
-
-        div {
-            flex 0
-
-            &.name-title {
-                flex 1
-                text-align left
-                padding-left 15px
-                vertical-align middle
-                font-family 'Ubuntu', sans-serif
-
-                .name {
-                    color white
-                    font-size 29px 
-                }
-
-                .title {
-                    font-family 'PT Sans Narrow', sans-serif
-                    text-transform lowercase
-                    font-size 18px
-                }
-            }
-            
-
-            &.icon {
-                background white
-                border-radius 7px
-                border 3px solid #1f72ad
-                width 25px
-                height 25px
-                padding 15px
-                animation spin 4s linear infinite
-                animation-play-state paused
-                cursor pointer
-
-                &:hover {
-                    animation-play-state running
-                }
-
-                .lettering {
-                    vertical-align middle
-                    height 32px
-                    display block
-                    width 25px
-                    position relative
-                    top calc(50% - 25px)
-                    left calc(50% - 14px)
-                    font-size 35px
-                    font-family 'Oleo Script',sans-serif
-                }
-
-            }
-        }
-    }
-    
-
-    .logo-black {
-        float left
-        img.logo {
-            width 185px
-        }
-    }
-
-    .menu-option-bar {
-        float right
-    }
-    
-    .button_container {
+    .menu {
         position absolute
-        top 15px
-        margin-top 20px
-        right 2%
-        height 22px
-        width 37px
-        cursor pointer
-        z-index 100
-        transition opacity .25s ease
-
-        &:hover {
-            opacity .7
+        top 0
+        left 0
+        z-index 99
+        width 0
+        height 100%
+        background rgba(0,0,0,.94)
+        color white
+        text-transform uppercase
+        transition width .35s, opacity .35s, visibility .35s, display .35s, opacity .35s
+        
+        a {
+            text-decoration none
+            color white
+            padding 15px
+            display inline-block
+            font-size 35px
         }
 
-        &.open {
-            span {
-                background #E8E8E8
-            }
-            .top {
-                transform translateY(11px) translateX(0) rotate(45deg)
-            }
-            
-            .middle {
-                opacity 0
-            }
-            
-            .bottom {
-                transform translateY(-11px) translateX(0) rotate(-45deg)
+        font-family 'Nunito', sans-serif
+    }
+
+    .menu.open {
+        width 100vw
+        opacity 1
+        visibility visible
+    }
+
+    .menu.closed {
+        width 0px
+        opacity 0
+        visibility hidden
+    }
+
+    .menu > nav > div:first-child {
+        padding-top 80px
+    }
+
+    .header {
+        position relative
+        top 0
+        padding 20px
+        margin 0px
+        background repeating-linear-gradient( 45deg, #212121, #212121 10px, #292929 10px, #292929 20px )
+        border-bottom 3px solid black
+        
+        .header-text {
+            color #1f72ad
+            display flex
+            width 260px
+
+            div {
+                flex 0
+
+                &.name-title {
+                    flex 1
+                    text-align left
+                    padding-left 15px
+                    vertical-align middle
+                    font-family 'Ubuntu', sans-serif
+
+                    .name {
+                        color white
+                        font-size 29px 
+                    }
+
+                    .title {
+                        font-family 'PT Sans Narrow', sans-serif
+                        text-transform lowercase
+                        font-size 18px
+                    }
+                }
+                
+
+                &.icon {
+                    background white
+                    border-radius 7px
+                    border 3px solid #1f72ad
+                    width 25px
+                    height 25px
+                    padding 15px
+                    animation spin 4s linear infinite
+                    animation-play-state paused
+                    cursor pointer
+
+                    &:hover {
+                        animation-play-state running
+                    }
+
+                    .lettering {
+                        vertical-align middle
+                        height 32px
+                        display block
+                        width 25px
+                        position relative
+                        top calc(50% - 25px)
+                        left calc(50% - 14px)
+                        font-size 35px
+                        font-family 'Oleo Script',sans-serif
+                    }
+
+                }
             }
         }
-        span {
-            background #edf3ff
-            border none
-            height 5px
-            width 100%
+        
+
+        .logo-black {
+            float left
+            img.logo {
+                width 185px
+            }
+        }
+
+        .menu-option-bar {
+            float right
+        }
+        
+        .button_container {
             position absolute
-            top 0
-            left 0
-            transition  all .35s ease
+            top 15px
+            margin-top 20px
+            right 2%
+            height 22px
+            width 37px
             cursor pointer
-            z-index 999
-            border-radius 5px
+            z-index 100
+            transition opacity .25s ease
 
-            &:nth-of-type(2) {
-                top: 11px
+            &:hover {
+                opacity .7
             }
-            
-            &:nth-of-type(3) {
-                top: 22px
+
+            &.open {
+                span {
+                    background #E8E8E8
+                }
+                .top {
+                    transform translateY(11px) translateX(0) rotate(45deg)
+                }
+                
+                .middle {
+                    opacity 0
+                }
+                
+                .bottom {
+                    transform translateY(-11px) translateX(0) rotate(-45deg)
+                }
+            }
+            span {
+                background #edf3ff
+                border none
+                height 5px
+                width 100%
+                position absolute
+                top 0
+                left 0
+                transition  all .35s ease
+                cursor pointer
+                z-index 999
+                border-radius 5px
+
+                &:nth-of-type(2) {
+                    top: 11px
+                }
+                
+                &:nth-of-type(3) {
+                    top: 22px
+                }
             }
         }
     }

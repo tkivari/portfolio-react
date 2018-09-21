@@ -5,6 +5,13 @@ import Slider from "react-slick";
 import Company from './company';
 import CompanyDetails from './company_details';
 import { companies } from '../config';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faAngleLeft);
+library.add(faAngleRight);
+
 
 
 class CompanyList extends Component {
@@ -28,12 +35,50 @@ class CompanyList extends Component {
     }
 
     render() {
+
+        function NextArrow(props) {
+            const { className, onClick } = props
+            return (
+                <div 
+                    className={className}
+                    onClick={onClick}
+                >
+                    <FontAwesomeIcon
+                        icon="angle-right"
+                        color="#fff"
+                        size="2x"
+                    />
+                </div>
+            );
+        }
+        
+        function PrevArrow(props) {
+            const { className, onClick } = props
+            return (
+                <div 
+                    className={className}
+                    onClick={onClick}
+                >
+                    <FontAwesomeIcon
+                        icon="angle-left"
+                        color="#fff"
+                        size="2x"
+                    />
+                </div>
+            );
+        }
+
+
         let slider_settings = {
             dots: false,
             infinite: true,
             speed: 400,
             slidesToShow: 7,
             slidesToScroll: 1,
+            // swipe: true,
+            draggable: false,
+            nextArrow: <NextArrow className="react-slick-next" />,
+            prevArrow: <PrevArrow className="react-slick-prev" />,
             responsive: [
                 {
                   breakpoint: 1700,
@@ -94,7 +139,6 @@ class CompanyList extends Component {
                 </Slider>
 
                 <div className="company-details-container">
-                    <div className="company-details-placeholder"></div>
                     {renderedData.details}
                 </div>
             </div>

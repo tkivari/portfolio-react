@@ -1,18 +1,46 @@
 .slick-initialized .slick-slide {
-    display: flex;
-    justify-content: space-around;
+    display flex
+    justify-content space-around
 }
 
 .slick-list, .slick-slide {
-    outline: none !important;
+    outline none !important
+}
+
+.slick-next, .slick-prev {
+    width 60px
+    height 173px
+    vertical-align middle
+    opacity 0.2
+    background black
+    color white
+    top 86px
+    font-size 25px
+    transition opacity .5s
+    z-index 9999
+
+    &:before {
+        content ''
+    }
+
+    &:hover {
+        opacity 0.7
+        background black
+    }
+
+    svg {
+        top calc(50% - 25px)
+        position relative
+    }
 }
 
 
 
 
 .company-list-container {
-    // display flex
-    
+    flex 1
+    display flex
+    flex-flow column
 
     .company-icon-container {
         width 200px
@@ -67,6 +95,18 @@
 }
 
 @media (max-width:400px) {
+    .slick-next, .slick-prev {
+        top: 46px;
+        width: 50px;
+        height: 95px;
+        opacity: 0.2;
+        font-size: 20px;
+
+        svg {
+            top calc(50% - 20px)
+        }
+    }
+
     .company-list-container {
         // display flex
         margin 0

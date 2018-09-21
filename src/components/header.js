@@ -22,7 +22,7 @@ class Header extends Component {
 
     render() {
         return (
-            <div>
+            <div className="header-container">
                 <div className={"menu " + this.menuClass()}>
                     <nav>
                         <div className="nav-item"><Link to="/">Experience</Link></div>
