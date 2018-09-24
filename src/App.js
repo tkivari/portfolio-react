@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Header from './components/header';
 import Footer from './components/footer';
-import Skills from './components/skills';
+// import Skills from './components/skills';
+// import DemoPanelMini from './components/demo_panel_mini';
 import Experience from './components/experience';
 // import logo from './logo.svg';
 import './static/css/index.css';
@@ -13,8 +14,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        {/* <Skills /> */}
-        <Experience />
+            {/* {this.renderDemoPanel()} */}
+            <Experience />    
         <Footer />
       </div>
     );

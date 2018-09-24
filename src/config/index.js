@@ -1,3 +1,32 @@
+export const demos = [
+    {
+        name: "When Pigs Fly",
+        technologies: [
+            "HTML 5 Canvas",
+            "Javascript (ES6) w/ websockets",
+            "Python (Tornado Framework)",
+            "MongoDB",
+            "FL Studio - sound production",
+            "Adobe Audition - sound editing"
+        ],
+        url: "https://when-pigs-fly.juicemobile.com",
+        description: "When Pigs Fly is a multiplayer, mobile-oriented game utilizing HTML 5 Canvas and websockets on the front end and the Tornado python framework on the backend.  My role entailed the creation of the backend and also assisting with animation and websocket configuration on the frontend.",
+        image: '/images/demos/when-pigs-fly.png'
+    },
+    {
+        name: "Warby Parker AR Demo",
+        technologies: [
+            "HTML 5 Canvas",
+            "Javascript (ES6) / React + Redux",
+            "Augmented Reality / Facial Recognition"
+        ],
+        url: "https://juice-ar-demo.surge.sh",
+        description: "This demo is meant to be used with a device containing a front-facing camera. The application uses facial recognition to determine the position of the user's face in the camera feed and allows the user to preview various glasses frames on their own face."
+    },
+];
+
+
+
 export const companies = [
     {
         name: "Juice Mobile",

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Slider from "react-slick";
 import Company from './company';
 import CompanyDetails from './company_details';
+import DemoPanelMini from '../components/demo_panel_mini';
 import { companies } from '../config';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -32,6 +33,17 @@ class CompanyList extends Component {
             companies: renderableCompanies,
             details: renderableDetails
         };
+    }
+
+    renderDemoPanel() {
+        if (window.screen.width > 1100) {
+            return (
+                <div className="mini-demos">
+                    <h2>Demos</h2>
+                    <DemoPanelMini />
+                </div>
+            );
+        }
     }
 
     render() {
@@ -140,7 +152,9 @@ class CompanyList extends Component {
 
                 <div className="company-details-container">
                     {renderedData.details}
+                    {this.renderDemoPanel()}
                 </div>
+                
             </div>
         );
     }
