@@ -7,8 +7,10 @@ class Demo extends Component {
         return (
             <div className="demo-container" onClick={()=> window.open(this.props.data.url, "_blank")}>
                 <img src={this.props.data.image} width="320" />
-                <h4>{this.props.data.name}</h4>
-                <div className="demo-content">{this.props.data.description}</div>
+                <div className="demo-content">
+                    <h4>{this.props.data.name}</h4>
+                    {this.props.data.description}
+                </div>
             </div>
         );
     }

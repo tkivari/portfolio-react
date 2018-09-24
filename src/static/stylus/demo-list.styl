@@ -1,0 +1,42 @@
+.demo-list {
+    display flex
+    flex-flow wrap
+    margin 20px
+
+    .demo-container {
+        padding 0
+        img {
+            border-bottom 4px solid #444
+            border-top 4px solid #1f72ad
+        }
+
+        .demo-content {
+            padding 15px
+            font-family 'Nunito', sans-serif
+            line-height 20px
+
+            h4 {
+                font-size 20px
+                font-family 'Ubuntu', sans-serif
+                margin 0 0 10px
+            }
+        }
+    }
+}
+
+@media (max-width: 695px) {
+    .demo-list {
+        // flex-flow column
+
+        .demo-container {
+            margin-bottom 15px
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .demo-list {
+        margin 0
+        margin-top 10px
+    }
+}

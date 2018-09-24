@@ -21,7 +21,8 @@ export const demos = [
             "Augmented Reality / Facial Recognition"
         ],
         url: "https://juice-ar-demo.surge.sh",
-        description: "This demo is meant to be used with a device containing a front-facing camera. The application uses facial recognition to determine the position of the user's face in the camera feed and allows the user to preview various glasses frames on their own face."
+        description: "This demo is meant to be used with a device containing a front-facing camera. The application uses facial recognition to determine the position of the user's face in the camera feed and allows the user to preview various glasses frames on their own face.",
+        image: '/images/demos/warby-parker.png'
     },
 ];
 
