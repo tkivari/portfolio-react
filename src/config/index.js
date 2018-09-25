@@ -230,13 +230,23 @@ export const companies = [
         years_label: "2015 - 2016",
         description: [
             {
+                type: 'marker',
+                title: 'Leadership',
+                points: [
+                    'Introduced team processes including daily standups, user story definition, and task estimation',
+                    'Oversaw and coordinated front-end and back-end development teams to ensure on-time completion of sprint deliverables',
+                    'Worked with team leaders to develop team processes and coding standards',
+                    'Led sprint planning, requirements gathering, feature estimation, and code review sessions',
+                    'Worked with team leads to evaluate technologies and make recommendations based on research combined with previous experience',
+                    'Assisted with devops tasks and regularly participated in pair programming, enabling me to maintain a hands-on approach and low-level understanding of the product'
+                ]
+            },
+            {
                 type: 'code',
                 title: 'Development',
                 points: [
-                    'Architecture, development & maintenance of <a href="https://demosite.juicemobile.com">Juice Mobile\'s Demo Site</a> (frontend & backend)',
-                    'Develop & maintain juicemobile.com and insights blog',
-                    'Architecture, development & deployment of custom client microsites',
-                    'Develop & Demo frontend and backend functionalities for the Creative Studio\'s Future Canvas initiative'
+                    'Architecture, development & maintenance of <a href="https://www.dealtap.com">DealTap website</a> (frontend & backend)',
+                    ''
                 ]
             },
         ],
