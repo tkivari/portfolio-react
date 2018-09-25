@@ -4,7 +4,7 @@ import '../../static/css/list_item.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLightbulb, faMarker, faPalette, faCode, faPaintBrush, faDatabase, faComment, faTrophy } from '@fortawesome/free-solid-svg-icons';
-import { faPython , faNode, faWordpress, faHtml5  } from '@fortawesome/free-brands-svg-icons';
+import { faPython, faPhp, faNode, faWordpress, faHtml5  } from '@fortawesome/free-brands-svg-icons';
 
 
 library.add(faLightbulb);
@@ -13,6 +13,7 @@ library.add(faPalette);
 library.add(faCode);
 library.add(faPaintBrush);
 library.add(faPython);
+library.add(faPhp);
 library.add(faNode);
 library.add(faWordpress);
 library.add(faHtml5);
@@ -57,6 +58,10 @@ class HighlightedListItem extends Component {
             {
                 name: "python",
                 icon: faPython
+            },
+            {
+                name: "php",
+                icon: faPhp
             },
             {
                 name: "node-js",
