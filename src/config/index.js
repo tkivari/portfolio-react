@@ -230,6 +230,14 @@ export const companies = [
         years_label: "2015 - 2016",
         description: [
             {
+                type: 'marker',
+                title: 'Leadership',
+                points: [
+                    'Oversaw and coordinated front-end and back-end development teams to ensure on-time completion of sprint deliverables',
+                    
+                ]
+            },
+            {
                 type: 'code',
                 title: 'Development',
                 points: [
