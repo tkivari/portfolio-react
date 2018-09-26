@@ -105,6 +105,7 @@ export const companies = [
                     'Created multiple demos and client sites using ReactJS',
                     'Created custom games and interactive ad executions using the HTML5 canvas and ES6',
                     'Used CSS3, Sass and Stylus on client sites, internal tools and ad units',
+                    'Used Webpack, grunt, create-react-app, and other frontend workflow tooling to streamline frontend development'
                 ]
             },
             {
@@ -233,34 +234,68 @@ export const companies = [
                 type: 'marker',
                 title: 'Leadership',
                 points: [
+                    'Introduced team processes including daily standups, user story definition, and task estimation',
                     'Oversaw and coordinated front-end and back-end development teams to ensure on-time completion of sprint deliverables',
-                    
+                    'Worked with team leaders to develop team processes and coding standards',
+                    'Led sprint planning, requirements gathering, feature estimation, and code review sessions',
+                    'Worked with team leads to evaluate technologies and make recommendations based on research combined with previous experience',
+                    'Assisted with devops tasks and regularly participated in pair programming, in order to maintain a hands-on approach and low-level understanding of the product'
                 ]
             },
             {
                 type: 'code',
                 title: 'Development',
                 points: [
-                    'Architecture, development & maintenance of <a href="https://demosite.juicemobile.com">Juice Mobile\'s Demo Site</a> (frontend & backend)',
-                    'Develop & maintain juicemobile.com and insights blog',
-                    'Architecture, development & deployment of custom client microsites',
-                    'Develop & Demo frontend and backend functionalities for the Creative Studio\'s Future Canvas initiative'
+                    'Architecture, development & maintenance of <a href="https://www.dealtap.com">DealTap website</a> (frontend & backend)',
+                    'Converted backend codebase to a RESTful API and separated frontend logic from the backend',
+                    'Helped design and revamp the user registration workflow with a focus on user experience to improve conversion rates'
                 ]
             },
         ],
         technologies: [
             {
+                type: 'php',
+                title: 'Backend (PHP)',
+                points: [
+                    'Phalcon - Rewrote the backend of the DealTap application as a RESTfult API using the Phalcon PHP framework',
+                    'Wrote several ETL scripts for database migrations using PHP'
+                ]
+            },
+            {
                 type: 'python',
                 title: 'Backend (Python)',
                 points: [
-                    'Django - Rewrote the backend API for the Juice Mobile Demo Site using Django with Django REST Framework.',
-                    'Flask - Updated existing internal tools and client executions that had been written in Flask',
-                    'Tornado - Created backends for multiplayer games, such as clones of Tetris and Flappy Bird, and websocket-enabled client microsites using Tornado'
+                    'Django - Used Django to create application prototypes and quickly build out admin panels for DealTap\'s PostgreSQL database using off-the-shelf Django functionality',
+                ]
+            },
+            {
+                type: 'database',
+                title: 'Databases',
+                points: [
+                    'MongoDB - Worked with the initial prototype of the DealTap database using MongoDB',
+                    'PostgreSQL - Converted the MongoDB database to PostgreSQL and implemented document storage where needed using JSONB field types'
+                ]
+            },
+            {
+                type: 'html',
+                title: 'Frontend',
+                points: [
+                    'Used JavaScript (ES6) to help the frontend team create a custom frontend framework for DealTap',
+                    'Used Pug to create HTML templates',
+                    'Used Sass to create stylesheets'
                 ]
             },
         ],
         highlights: [
-            
+            {
+                type: 'trophy',
+                title: 'Highlights',
+                points: [
+                    'Directed and participated in the development and successful lauch of v2.0 of DealTap\'s web-based application in less than six months',
+                    'Improved the turnaround time for new features by incorporating agile methodologies into the teams\' workflow',
+                    'Improved the rate of successful conversion and user registration by focusing efforts on user experience'
+                ]
+            }
         ],
         logo: '/images/logos/rsz_dealtap.png',
         backgroundColor: '#8954D1',
@@ -280,26 +315,56 @@ export const companies = [
                 type: 'code',
                 title: 'Development',
                 points: [
-                    'Architecture, development & maintenance of <a href="https://demosite.juicemobile.com">Juice Mobile\'s Demo Site</a> (frontend & backend)',
-                    'Develop & maintain juicemobile.com and insights blog',
-                    'Architecture, development & deployment of custom client microsites',
-                    'Develop & Demo frontend and backend functionalities for the Creative Studio\'s Future Canvas initiative'
+                    'Built and maintained many of AdParlor’s SAAS platform’s major features, including an ad design &amp; creation platform, campaign management and asset libraries for Facebook and Twitter advertising campaigns.',
+                    'Developed client reporting tools for Facebook insights, including a RESTful API backend and a front-end client. Reports include tracking post performance, engagement, page likes, reach, virality, and similar metrics over time for client pages',
+                    'Developed competitive benchmarking tool to compare client Facebook pages with relevant competitor pages.  Metrics include posting volume, engagement rates, page fan count, community involvement, and "were here" counts.',
+                    'Participated in product and feature planning, as well as iteration planning and retrospectives in an agile environment'
                 ]
             },
         ],
         technologies: [
             {
-                type: 'python',
-                title: 'Backend (Python)',
+                type: 'php',
+                title: 'Backend (PHP)',
                 points: [
-                    'Django - Rewrote the backend API for the Juice Mobile Demo Site using Django with Django REST Framework.',
-                    'Flask - Updated existing internal tools and client executions that had been written in Flask',
-                    'Tornado - Created backends for multiplayer games, such as clones of Tetris and Flappy Bird, and websocket-enabled client microsites using Tornado'
+                    'Symfony &amp; Silex - Wrote AdParlor\'s Facebook ad creation API as well as several microservices using Symfony and Silex',
+                    'Wrote multiple custom modules in PHP, including a Facebook page benchmarking and comparison tool, performance reporting tools',
+                    'Worked on AdParlor\'s original platform in vanilla PHP'
+                ]
+            },
+            {
+                type: 'ruby',
+                title: 'Backend (Ruby)',
+                points: [
+                    'Assisted in developing the new version of AdParlor\'s ad creation platform with Ruby on Rails',
+                    'Built several command-line utilities in Ruby to generate boilerplate JavaScript code for Backbone.js modules used on the frontend of AdParlor\'s SAAS platforms'
+                ]
+            },
+            {
+                type: 'database',
+                title: 'Databases',
+                points: [
+                    'MySQL - All AdParlor backend systems were built using MySQL'
+                ]
+            },
+            {
+                type: 'html',
+                title: 'Frontend',
+                points: [
+                    'Used Backbone.js to create a custom javascript framework for AdParlor\'s SAAS platform',
+                    'Used mustache logicless HTML templates to build interfaces and display data retrieved from internal APIs',
+                    'Used vanilla Javascript, HTML and CSS while working on AdParlor\'s legacy systems'
                 ]
             },
         ],
         highlights: [
-            
+            {
+                type: 'trophy',
+                title: 'Highlights',
+                points: [
+                    'Successfully transitioned from a backend role to a frontend role, and eventually to a full-stack role with responsibilities across multiple teams within the company',
+                ]
+            }
         ],
         logo: '/images/logos/adparlor-logo.svg',
         backgroundColor: '#34495e',
@@ -319,26 +384,31 @@ export const companies = [
                 type: 'code',
                 title: 'Development',
                 points: [
-                    'Architecture, development & maintenance of <a href="https://demosite.juicemobile.com">Juice Mobile\'s Demo Site</a> (frontend & backend)',
-                    'Develop & maintain juicemobile.com and insights blog',
-                    'Architecture, development & deployment of custom client microsites',
-                    'Develop & Demo frontend and backend functionalities for the Creative Studio\'s Future Canvas initiative'
+                    'Worked with a team to develop a RESTful API to provide a single interface for database operations across multiple in-house applications',
+                    'Worked with a team to improve and update an in-house web application for managing client ad campaigns, transitioning from a traditional database-driven application to an API consumer',
+                    'Developed web applications to create and serve VAST-compliant video and image-based ad units using the AppNexus REST API in Java with Spring MVC framework',
+                    'Debugging, refactoring and improving functionality for existing applications inside of eyeReturn’s application suite'
                 ]
             },
         ],
         technologies: [
             {
-                type: 'python',
-                title: 'Backend (Python)',
+                type: 'java',
+                title: 'Backend (Java)',
                 points: [
-                    'Django - Rewrote the backend API for the Juice Mobile Demo Site using Django with Django REST Framework.',
-                    'Flask - Updated existing internal tools and client executions that had been written in Flask',
-                    'Tornado - Created backends for multiplayer games, such as clones of Tetris and Flappy Bird, and websocket-enabled client microsites using Tornado'
+                    'Used the Spring MVC framework across multiple projects in EyeReturn\'s application suite.',
+                    'Used Google Web Toolkit to write frontend code in Java'
                 ]
             },
         ],
         highlights: [
-            
+            {
+                type: 'trophy',
+                title: 'Highlights',
+                points: [
+                    'Successfully taught myself Java and Spring MVC framework on the job within 3 months',
+                ]
+            }
         ],
         logo: '/images/logos/Eyereturn-logo.svg',
         backgroundColor: 'white',
@@ -358,26 +428,51 @@ export const companies = [
                 type: 'code',
                 title: 'Development',
                 points: [
-                    'Architecture, development & maintenance of <a href="https://demosite.juicemobile.com">Juice Mobile\'s Demo Site</a> (frontend & backend)',
-                    'Develop & maintain juicemobile.com and insights blog',
-                    'Architecture, development & deployment of custom client microsites',
-                    'Develop & Demo frontend and backend functionalities for the Creative Studio\'s Future Canvas initiative'
+                    'Developed front and back end functionality for the Publish tier of the Syncapse Platform in an agile environment',
+                    'Built tools to manage and publish content for a variety of social media platforms including Facebook, Twitter and Youtube using their respective APIs',
+                    'Reported, documented, investigated, and fixed bugs in the platform',
+                    'Coordinated with members of other teams to develop cross-functional features',
+                    'Participated in iteration planning and retrospectives in an agile environment',
                 ]
             },
         ],
         technologies: [
             {
-                type: 'python',
-                title: 'Backend (Python)',
+                type: 'php',
+                title: 'Backend (PHP)',
                 points: [
-                    'Django - Rewrote the backend API for the Juice Mobile Demo Site using Django with Django REST Framework.',
-                    'Flask - Updated existing internal tools and client executions that had been written in Flask',
-                    'Tornado - Created backends for multiplayer games, such as clones of Tetris and Flappy Bird, and websocket-enabled client microsites using Tornado'
+                    'Used PHP to develop backend systems for the Syncapse Platform',
                 ]
             },
+            {
+                type: 'database',
+                title: 'Databases',
+                points: [
+                    'MySQL - All Syncapse backend systems were built using MySQL'
+                ]
+            },
+            {
+                type: 'html',
+                title: 'Frontend',
+                points: [
+                    'Used HTML, CSS and Javascript to develop frontend tools for the Syncapse platform',
+                    'Used ActionScript to develop custom plugins for the Syncapse Flash video player'
+                ]
+            },
+
+            
         ],
         highlights: [
-            
+            {
+                type: 'trophy',
+                title: 'Highlights',
+                points: [
+                    'Developed a custom plugin for the Syncapse video player used on Facebook to track the amount of time a user spent watching a video, completion rate, and other engagement metrics, with an accompanying RESTful API to store user engagement data, several years before Facebook offered this functionality to advertisers',
+                    'Created a custom transcoding system using FFMpeg which dramatically improved the quality of videos uploaded to Facebook through the Syncapse platform',
+                    'Implemented a health check system to periodically check all platform systems and automatically alert appropriate team members via IM whenever a part of the platform was down',
+                    'Contributed bug fixes to an open source PHP library used for posting to Twitter'
+                ]
+            }
         ],
         logo: '/images/logos/syncapse.png',
         backgroundColor: '#D31C17',
@@ -386,7 +481,7 @@ export const companies = [
         titleTextColor: 'white'
     },
     {
-        name: "Webcanada",
+        name: "Achiga (formerly WebCanada)",
         title: "Web Developer",
         company_id: 7,
         start_date: "Oct. 2015",
@@ -397,26 +492,38 @@ export const companies = [
                 type: 'code',
                 title: 'Development',
                 points: [
-                    'Architecture, development & maintenance of <a href="https://demosite.juicemobile.com">Juice Mobile\'s Demo Site</a> (frontend & backend)',
-                    'Develop & maintain juicemobile.com and insights blog',
-                    'Architecture, development & deployment of custom client microsites',
-                    'Develop & Demo frontend and backend functionalities for the Creative Studio\'s Future Canvas initiative'
+                    'Developed front-end and back-end components for medium- and large-scale commercial websites for international hotel brands',
+                    'Created data and content migration tools to assist in site and application upgrades',
+                    'Developed modules, components and infrastructure for proprietary content management systems',
+                    'Reported to Senior Project Manager to determine scope, requirements and deliverables for assigned projects, and worked with a team of developers to meet deadlines'
                 ]
             },
         ],
         technologies: [
             {
-                type: 'python',
-                title: 'Backend (Python)',
+                type: 'php',
+                title: 'Backend (PHP)',
                 points: [
-                    'Django - Rewrote the backend API for the Juice Mobile Demo Site using Django with Django REST Framework.',
-                    'Flask - Updated existing internal tools and client executions that had been written in Flask',
-                    'Tornado - Created backends for multiplayer games, such as clones of Tetris and Flappy Bird, and websocket-enabled client microsites using Tornado'
+                    'All Achiga/WebCanada websites were built using PHP'
+                ]
+            },
+            {
+                type: 'database',
+                title: 'Databases',
+                points: [
+                    'MySQL - All WebCanada/Achiga backend systems were built using MySQL'
                 ]
             },
         ],
         highlights: [
-            
+            {
+                type: 'trophy',
+                title: 'Highlights',
+                points: [
+                    'Developed the first prototype version of Achiga\'s Concierge Plus property management and resident communication portal',
+                    'Developed v4 of Achiga\'s LiveCMS content management system for hotel brands and websites',
+                ]
+            }
         ],
         logo: '/images/logos/rsz_webcanada.png',
         backgroundColor: 'white',
@@ -426,36 +533,58 @@ export const companies = [
     },
     {
         name: "Print Logic",
-        title: "Founder, Director of Development",
+        title: "Co-Founder, Director of Development",
         company_id: 8,
         start_date: "Oct. 2015",
         end_date: "Feb. 2016",
         years_label: "2015",
         description: [
             {
+                type: 'marker',
+                title: 'Leadership',
+                points: [
+                    'Led a small team of designers and developers to develop print-related web-based document management systems and document analysis software, including desktop software used to estimate cost-per-print on various printers and copiers',
+                    'Worked with clients to determine software requirements and plan development cycles by breaking development tasks down into small, achievable goals',
+                    'Led sales presentations and negotiated contracts directly with clients',
+                    'Worked to obtain IRAP funding and hire developers using government grants for research and development',
+                    'Developed product roadmaps and worked with development team to plan development activities'
+                ]
+            },
+            {
                 type: 'code',
                 title: 'Development',
                 points: [
-                    'Architecture, development & maintenance of <a href="https://demosite.juicemobile.com">Juice Mobile\'s Demo Site</a> (frontend & backend)',
-                    'Develop & maintain juicemobile.com and insights blog',
-                    'Architecture, development & deployment of custom client microsites',
-                    'Develop & Demo frontend and backend functionalities for the Creative Studio\'s Future Canvas initiative'
+                    'Built software to estimate cost-per-print using manufacturer-provided ICC colour profiles',
+                    'Researched and developed training manuals and curriculum for print technology seminars for clients including Pitney Bowes and Ricoh',
+                    'Developed online training modules for print technicians',
+                    'Designed, built and maintained the web presence for Print Logic'
                 ]
             },
         ],
         technologies: [
             {
-                type: 'python',
-                title: 'Backend (Python)',
+                type: 'java',
+                title: 'Backend (Java, Visual Basic)',
                 points: [
-                    'Django - Rewrote the backend API for the Juice Mobile Demo Site using Django with Django REST Framework.',
-                    'Flask - Updated existing internal tools and client executions that had been written in Flask',
-                    'Tornado - Created backends for multiplayer games, such as clones of Tetris and Flappy Bird, and websocket-enabled client microsites using Tornado'
+                    'Wrote software to estimate cost per print based on manufacturer-provided ICC colour profiles, incorporating the cost of all consumable components using Java and Visual Basic',
+                ]
+            },
+            {
+                type: 'php',
+                title: 'Backend (PHP)',
+                points: [
+                    'Designed and developed Print Logic\'s website using PHP and mySQL'
                 ]
             },
         ],
         highlights: [
-            
+            {
+                type: 'trophy',
+                title: 'Highlights',
+                points: [
+                    'Successfully sold software to estimate cost-per-print of various printer and copier models to international print manufacturers including Ricoh and Pitney Bowes, and used the goodwill developed through close client collaboration to sell training seminars for print technicians to teach printer and copier optimization',
+                ]
+            }
         ],
         logo: '/images/logos/printlogic.png',
         backgroundColor: '#216c8a',

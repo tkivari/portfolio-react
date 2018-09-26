@@ -3,8 +3,8 @@ import '../../static/css/list_item.css';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLightbulb, faMarker, faPalette, faCode, faPaintBrush, faDatabase, faComment, faTrophy } from '@fortawesome/free-solid-svg-icons';
-import { faPython, faPhp, faNode, faWordpress, faHtml5  } from '@fortawesome/free-brands-svg-icons';
+import { faLightbulb, faGem, faMarker, faPalette, faCode, faPaintBrush, faDatabase, faComment, faTrophy } from '@fortawesome/free-solid-svg-icons';
+import { faPython, faJava, faPhp, faNode, faWordpress, faHtml5  } from '@fortawesome/free-brands-svg-icons';
 
 
 library.add(faLightbulb);
@@ -20,6 +20,8 @@ library.add(faHtml5);
 library.add(faDatabase);
 library.add(faComment);
 library.add(faTrophy);
+library.add(faGem);
+library.add(faJava);
 
 
 class HighlightedListItem extends Component {
@@ -74,6 +76,14 @@ class HighlightedListItem extends Component {
             {
                 name: "wordpress",
                 icon: faWordpress
+            },
+            {
+                name: "ruby",
+                icon: faGem
+            },
+            {
+                name: "java",
+                icon: faJava
             }
         ];
 
