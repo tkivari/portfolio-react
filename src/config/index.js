@@ -329,7 +329,7 @@ export const companies = [
                 points: [
                     'Symfony &amp; Silex - Wrote AdParlor\'s Facebook ad creation API as well as several microservices using Symfony and Silex',
                     'Wrote multiple custom modules in PHP, including a Facebook page benchmarking and comparison tool, performance reporting tools',
-                    'Worked on AdParlor\'s original platform in vanilla PHP'
+                    'Worked on AdParlor\'s legacy platform in vanilla PHP'
                 ]
             },
             {
