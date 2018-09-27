@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import Header from './components/header';
 import Footer from './components/footer';
-import Experience from './components/experience';
+import ContactForm from './components/contact';
 import './static/css/index.css';
-import './static/css/experience.css';
+import './static/css/contact.css';
 import './App.css';
 
-class App extends Component {
+class Contact extends Component {
   render() {
     return (
       <div className="App">
         <Header />
-            <Experience />    
+            <ContactForm />    
         <Footer />
       </div>
     );
   }
 }
 
-export default App;
+export default Contact;
