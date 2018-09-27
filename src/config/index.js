@@ -35,7 +35,7 @@ export const companies = [
         company_id: 1,
         start_date: "Feb. 2017",
         end_date: "Present",
-        years_label: "2015 - Present",
+        years_label: "2017 - Present",
         description: [
             {
                 type: 'marker',
@@ -307,9 +307,9 @@ export const companies = [
         name: "AdParlor by AdKnowledge",
         title: "Senior Software Engineer",
         company_id: 4,
-        start_date: "Oct. 2015",
-        end_date: "Feb. 2016",
-        years_label: "2015 - 2016",
+        start_date: "Dec. 2012",
+        end_date: "Oct. 2015",
+        years_label: "2012 - 2015",
         description: [
             {
                 type: 'code',
@@ -376,9 +376,9 @@ export const companies = [
         name: "EyeReturn Marketing",
         title: "Web Application Developer",
         company_id: 5,
-        start_date: "Oct. 2015",
-        end_date: "Feb. 2016",
-        years_label: "2015",
+        start_date: "May 2012",
+        end_date: "Dec. 2012",
+        years_label: "2012",
         description: [
             {
                 type: 'code',
@@ -420,9 +420,9 @@ export const companies = [
         name: "Syncapse",
         title: "Web Developer",
         company_id: 6,
-        start_date: "Oct. 2015",
-        end_date: "Feb. 2016",
-        years_label: "2015",
+        start_date: "Feb. 2011",
+        end_date: "May 2012",
+        years_label: "2011 - 2012",
         description: [
             {
                 type: 'code',
@@ -484,9 +484,9 @@ export const companies = [
         name: "Achiga (formerly WebCanada)",
         title: "Web Developer",
         company_id: 7,
-        start_date: "Oct. 2015",
-        end_date: "Feb. 2016",
-        years_label: "2015",
+        start_date: "Sept. 2009",
+        end_date: "Feb. 2011",
+        years_label: "2009 - 2011",
         description: [
             {
                 type: 'code',
@@ -535,9 +535,9 @@ export const companies = [
         name: "Print Logic",
         title: "Co-Founder, Director of Development",
         company_id: 8,
-        start_date: "Oct. 2015",
-        end_date: "Feb. 2016",
-        years_label: "2015",
+        start_date: "Apr. 2005",
+        end_date: "Sept. 2009",
+        years_label: "2005 - 2009",
         description: [
             {
                 type: 'marker',
