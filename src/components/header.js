@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-
 import { ShowMenuAction, HideMenuAction } from '../actions/header_actions';
 
 class Header extends Component {
@@ -25,10 +24,10 @@ class Header extends Component {
             <div className="header-container">
                 <div className={"menu " + this.menuClass()}>
                     <nav>
-                        <div className="nav-item"><Link to="/">Experience</Link></div>
-                        <div className="nav-item"><Link to="/demos">Demos</Link></div>
-                        {/* <div className="nav-item"><Link to="/about">About Me</Link></div> */}
-                        <div className="nav-item"><Link to="/contact">Contact Me</Link></div>
+                        <div className="nav-item"><Link to="/" onClick={this.toggleMenu}>Experience</Link></div>
+                        <div className="nav-item"><Link to="/demos" onClick={this.toggleMenu}>Demos</Link></div>
+                        {/* <div className="nav-item"><Link to="/about" onClick={this.toggleMenu}>About Me</Link></div> */}
+                        <div className="nav-item"><Link to="/contact" onClick={this.toggleMenu}>Contact Me</Link></div>
                     </nav>
                 </div>
                 <div className="header">

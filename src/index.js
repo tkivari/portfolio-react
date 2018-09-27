@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import App from './App';
 import Demos from './Demos';
+import Contact from './Contact';
 import registerServiceWorker from './registerServiceWorker';
 
 import configureStore from './store/configureStore';
@@ -15,6 +16,7 @@ ReactDOM.render(
             <Switch>
                 <Route exact path="/" component={App} />
                 <Route exact path="/demos" component={Demos} />
+                <Route exact path="/contact" component={Contact} />
             </Switch>
         </BrowserRouter>
     </Provider>, document.getElementById('root'));
