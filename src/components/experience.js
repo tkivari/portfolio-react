@@ -14,12 +14,13 @@ class Experience extends Component {
         // Google Analytics
         ReactGA.initialize('UA-32604842-12');
         ReactGA.pageview(window.location.pathname + window.location.search);
-        
+
         return (
             <div className="container experience-container">
                 {/* <h1>Work Experience</h1> */}
                 <div className="company-list">
-                    <CompanyList companies={companies} />                        
+                    <CompanyList companies={companies} />
+                    <div className="footer-banner">psst! this site was built with react + redux and containerized with docker - check out the source code <a href="//www.github.com/tkivari/portfolio-react" target="_blank">here!</a></div>
                 </div>
             </div>
         )

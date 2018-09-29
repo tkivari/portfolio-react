@@ -53,8 +53,6 @@ class HighlightedListItem extends Component {
             backgroundImage: "linear-gradient(to right, "+colors.background+","+darkColor+")"
         };
 
-        console.log(this.props.data.type);
-
         let icon = null;
         let brands = [
             {
@@ -118,7 +116,6 @@ class HighlightedListItem extends Component {
     }
     
     renderPoints(points) {
-        console.log(points)
         let point_list = [];
         points.forEach((point) => {
             point_list.push(

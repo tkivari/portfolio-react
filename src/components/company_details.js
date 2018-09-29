@@ -159,7 +159,6 @@ class CompanyDetails extends Component {
                 ctx.fillRect(0,0,image.width+20, image.height+20);
             }
             ctx.drawImage(image, 10, 10);
-            console.log("SCREEN WIDTH:", window.screen.width);
             if (window.screen.width <= 500) {
                 context.drawImage(image, origin_x, origin_y, drawn_width, drawn_height);
             } else {
@@ -200,7 +199,6 @@ class CompanyDetails extends Component {
             this.refs.canvas.style.opacity = 1;
         }
 
-        console.log("height",this.refs.companydetails.clientHeight);
         this.refs.companydetails.style.height = this.refs.companycontent.style.height;
         // this.selectTab("description");
     }
