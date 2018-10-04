@@ -24,6 +24,16 @@ export const demos = [
         description: "This demo is meant to be used with a device containing a front-facing camera. The application uses facial recognition to determine the position of the user's face in the camera feed and allows the user to preview various glasses frames on their own face.",
         image: '/images/demos/warby-parker.png'
     },
+    {
+        name: "React-Zoomer NPM Package",
+        technologies: [
+            "HTML 5 Canvas",
+            "Javascript (ES6) / React",
+        ],
+        link: "/demos/react-zoomer",
+        description: "React Zoomer is a React component that loads an image into a canvas and allows a user to zoom in and out of the image using either the mouse scroll wheel, or by pinch-zooming on a mobile device.",
+        image: '/images/demos/zoomer.png'
+    }
 ];
 
 
